@@ -1,6 +1,12 @@
+import { logo } from '../../assets';
+
 const Navbar = ()=> {
     return (
-        <div>Navbar</div>
+        <div>
+            <div>
+                <img src={logo} />
+            </div>
+        </div>
     )
 }
 
