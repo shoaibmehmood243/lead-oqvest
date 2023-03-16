@@ -8,7 +8,7 @@ import './../node_modules/primeflex/primeflex.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-  <div className='bg-blue-50'>
+  <div className='bg-blue-50'> 
     <App />
   </div>
   </React.StrictMode>,
