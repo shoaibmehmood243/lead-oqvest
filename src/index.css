@@ -1,0 +1,67 @@
+::after, ::before, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.steps {
+    min-height: 82vh;
+}
+
+.step-in {
+    padding: 20px 0px;
+}
+
+.steps .p-card {
+    box-shadow: 0px -10.9365px 51.466px rgba(0, 0, 0, 0.07), 0px -4.56902px 21.5012px rgba(0, 0, 0, 0.0503198), 0px -2.44281px 11.4956px rgba(0, 0, 0, 0.0417275), 0px -1.36942px 6.44434px rgba(0, 0, 0, 0.035), 0px -0.72729px 3.42254px rgba(0, 0, 0, 0.0282725), 0px -0.302641px 1.4242px rgba(0, 0, 0, 0.0196802);
+border-radius: 9.42926px !important;
+}
+
+.p-card:hover, .active {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+.grid-app {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-app .p-card {
+    height: 160px;
+}
+
+.grid-app .p-card-body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.steps .p-button {
+    border: 1px solid #222D39 !important;
+}
+
+.steps .p-button-outlined {
+    color: #222D39 !important;
+}
+
+.steps .p-button:enabled:hover, .p-button:not(button):not(a):not(.p-disabled):hover {
+    background-color: #222D39 !important;
+}
+
+.steps .p-slider {
+    background-color: #4B88E6 !important;
+}
+
+.steps .p-slider .p-slider-range {
+    background-color: #222D39;
+}
+
+.steps .p-slider .p-slider-handle {
+    border: 2px solid #222D39;
+}
