@@ -3,7 +3,7 @@ import { building, manufactured, multiFamilyHome, singleFamily, townHome } from 
 import { Card } from 'primereact/card'
 import {Button} from 'primereact/button'
 
-const StepTwo = ({formData, setFormData, step, setStep})=> {
+const StepOneRef = ({formData, setFormData, step, setStep})=> {
     const [state, setState] = useState(formData.propertyType)
     const data = [
         {
@@ -21,20 +21,16 @@ const StepTwo = ({formData, setFormData, step, setStep})=> {
         {
             name: 'Multi-Family Home',
             img: multiFamilyHome
-        },
-        {
-            name: 'Manufactured or Mobile Home',
-            img: manufactured
         }
     ]
     return (
         <div>
             <div className='w-8 m-auto text-center'>
-                <h1 className="text-900 text-4xl mb-6">Great! What type of property are you purchasing?</h1>
-                <div className="grid-app max-w-full">
+                <h1 className="text-900 text-4xl mb-6">Great! What type of property are you refinancing?</h1>
+                <div className="grid max-w-full">
                     {
                         data.map((data, index)=> (
-                            <div key={index} onClick={()=> {setState(data.name); setTimeout(()=> {setStep(step + 1)}, 1000); setFormData({...formData, propertyType: data.name})}}>
+                            <div key={index} onClick={()=> {setState(data.name); setTimeout(()=> {setStep(step + 1)}, 1000); setFormData({...formData, propertyType: data.name})}} className='col-3'>
                                 <Card className={`cursor-pointer ${state === data.name ? 'active' : 'text-900'}`}>
                                     <img src={data.img} />
                                     <h6 className='text-xs m-0 mt-2'>{data.name}</h6>
@@ -51,4 +47,4 @@ const StepTwo = ({formData, setFormData, step, setStep})=> {
     )
 }
 
-export default StepTwo;
+export default StepOneRef;

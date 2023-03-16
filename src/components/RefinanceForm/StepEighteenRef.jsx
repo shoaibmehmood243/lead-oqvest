@@ -6,14 +6,14 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 const URL = 'http://localhost:3000'
 
-const StepSeventeen = ({formData, setFormData, step, setStep})=> {
+const StepEighteenRef = ({formData, setFormData, step, setStep})=> {
     const [isClicked, setIsClicked] = useState(false);
     const navigate = useNavigate()
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
             setIsClicked(true)
-            const res = await axios.post(URL + '/form/purchase', {formData});
+            const res = await axios.post(URL + '/form/refinance', {formData});
             setIsClicked(false);
             if(res.data) {
                 setTimeout(()=> {
@@ -44,4 +44,4 @@ const StepSeventeen = ({formData, setFormData, step, setStep})=> {
     )
 }
 
-export default StepSeventeen;
+export default StepEighteenRef;
