@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Slider } from 'primereact/slider'
 import {Button} from 'primereact/button';
-import { InputText } from "primereact/inputtext";
+import { InputNumber } from 'primereact/inputnumber'
 
 const formatPrice = (value) => {
-    return `${value} %`;
+    return `${value}`;
 };
 
 const StepEight = ({formData, setFormData, step, setStep})=> {
@@ -18,14 +18,21 @@ const StepEight = ({formData, setFormData, step, setStep})=> {
         setFormData({...formData, downPayment: value})
     };
     
-
     const handleInputChange = (event) => {
-        const value = event.target.value;
+        const value = event.value;
         setInputValue(value);
-        if (!isNaN(value)) {
+        if (Number(value)) {
             const price = parseInt(value);
-            setPriceRange(price);
-            setFormData({...formData, downPayment: price})
+            if(price > 200) {
+                setPriceRange(200);
+                setFormData({...formData, downPayment: 200})
+            } else if(price === 3) {
+                setPriceRange(3);
+                setFormData({...formData, downPayment: 3})
+            } else {
+                setPriceRange(price);
+                setFormData({...formData, downPayment: price})
+            }
         }
     };
 
@@ -34,7 +41,7 @@ const StepEight = ({formData, setFormData, step, setStep})=> {
             <div className='w-8 m-auto text-center'>
                 <h1 className="text-900 text-4xl mb-6">What is your estimate down payment?</h1>
                 <div className="w-8 m-auto">
-                    <InputText value={inputValue} onChange={handleInputChange} className="w-2" />
+                    <InputNumber min={3} max={200} value={inputValue} onChange={(e)=>handleInputChange(e)} className="w-2" />
                     <Slider
                         value={priceRange}
                         step={1}

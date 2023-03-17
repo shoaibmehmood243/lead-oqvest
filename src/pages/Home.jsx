@@ -9,7 +9,6 @@ import StepFive from "../components/PurchaseForm/StepFive";
 import StepFour from "../components/PurchaseForm/StepFour";
 import StepFourteen from "../components/PurchaseForm/StepFourteen";
 import StepNine from "../components/PurchaseForm/StepNine";
-import StepOne from "../components/PurchaseForm/StepOne";
 import StepSeven from "../components/PurchaseForm/StepSeven";
 import StepSeventeen from "../components/PurchaseForm/StepSeventeen";
 import StepSix from "../components/PurchaseForm/StepSix";
@@ -38,6 +37,7 @@ import StepThirteenRef from "../components/RefinanceForm/StepThirteenRef";
 import StepThreeRef from "../components/RefinanceForm/StepThreeRef";
 import StepTwelveRef from "../components/RefinanceForm/StepTwelveRef";
 import StepTwoRef from "../components/RefinanceForm/StepTwoRef";
+import StepZipCodeRef from "../components/RefinanceForm/StepZipCodeRef";
 
 const Home = () => {
     const [step, setStep] = useState(1);
@@ -56,30 +56,17 @@ const Home = () => {
         incomeProof: '',
         agentAssociated: '',
         monthlyincome: 3000,
+        fhaLoan: '',
         zipCode: '',
         name: '',
         email: ''
     });
-
-    const handleNext = () => {
-        setStep(step + 1);
-    };
-
-    const handlePrevious = () => {
-        setStep(step - 1);
-    };
 
     const handleChange = (event) => {
         setFormData({
             ...formData,
             [event.target.name]: event.target.value
         });
-    };
-
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log(formData);
-        // TODO: save form data to database or API
     };
 
     const renderStep = () => {
@@ -157,10 +144,12 @@ const Home = () => {
                 case 16:
                     return <StepFifteenRef handleChange={handleChange} step={step} setStep={setStep} formData={formData} setFormData={setFormData} />;
                 case 17:
-                    return <StepSixteenRef handleChange={handleChange} step={step} setStep={setStep} formData={formData} setFormData={setFormData} />;
+                    return <StepZipCodeRef handleChange={handleChange} step={step} setStep={setStep} formData={formData} setFormData={setFormData} />;
                 case 18:
-                    return <StepSeventeenRef handleChange={handleChange} step={step} setStep={setStep} formData={formData} setFormData={setFormData} />;
+                    return <StepSixteenRef handleChange={handleChange} step={step} setStep={setStep} formData={formData} setFormData={setFormData} />;
                 case 19:
+                    return <StepSeventeenRef handleChange={handleChange} step={step} setStep={setStep} formData={formData} setFormData={setFormData} />;
+                case 20:
                     return <StepEighteenRef handleChange={handleChange} step={step} setStep={setStep} formData={formData} setFormData={setFormData} />;
                 default:
                     return null

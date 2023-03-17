@@ -1,20 +1,39 @@
-import { InputMask } from 'primereact/inputmask'
+import { useState } from "react";
+import { cross, tick } from "../../assets";
+import { Card } from 'primereact/card'
 import {Button} from 'primereact/button'
 
 const StepFifteenRef = ({formData, setFormData, step, setStep})=> {
+    const [state, setState] = useState(formData.fhaLoan)
+    const data = [
+        {
+            name: 'Yes',
+            img: tick
+        },
+        {
+            name: 'No',
+            img: cross
+        }
+    ]
     return (
         <div>
-            <div className='w-8 m-auto text-center'>
+            <div className='w-5 m-auto text-center'>
                 <h1 className="text-900 text-4xl mb-6">Do you currently have a FHA loan?</h1>
-                <form>
-                <div>
-                    <InputMask value={formData.zipCode} mask="99999" onChange={(e)=> setFormData({...formData, zipCode: e.target.value})} type="text" className="p-inputtext-lg w-6" placeholder="Enter your Zip Code here" />
+                <div className="grid max-w-full">
+                    {
+                        data.map((data, index)=> (
+                            <div key={index} onClick={()=> {setState(data.name); setTimeout(()=> {setStep(step + 1)}, 1000); setFormData({...formData, fhaLoan: data.name})}} className='col-6'>
+                                <Card className={`cursor-pointer ${state === data.name ? 'active' : 'text-900'}`}>
+                                    <img src={data.img} />
+                                    <h6 className='text-xs m-0 mt-2'>{data.name}</h6>
+                                </Card>
+                            </div>
+                        ))
+                    }
                 </div>
-                <div className="mt-6 flex align-items-center justify-content-center gap-4">
-                    <Button type='button' onClick={()=> setStep(step-1)} label="Back" className="px-6" outlined />
-                    <Button type='submit' disabled={formData.zipCode ? false : true} onClick={()=> setStep(step+1)} label="Continue" className="px-6 surface-900" />
+                <div className="mt-6">
+                    <Button onClick={()=> setStep(step-1)} label="Back" className="px-6" outlined />
                 </div>
-                </form>
             </div>
         </div>
     )
