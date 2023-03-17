@@ -1,11 +1,9 @@
 import Home from "./Home";
-import Purchase from "./Purchase";
-import Refinance from "./Refinance";
+import LandingPage from "./LandingPage";
 import Thanks from "./Thanks";
 
 export {
     Home,
-    Purchase,
-    Refinance,
+    LandingPage,
     Thanks
 }

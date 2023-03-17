@@ -28,6 +28,23 @@ import notEmployed from './notEmployed.svg';
 import selfEmployed from './selfEmployed.svg';
 import military from './military.svg';
 import other from './other.svg';
+import closing from './closing.svg';
+import complete from './complete.svg';
+import footer1 from './footer-1.png';
+import footer2 from './footer-2.png';
+import forbes from './forbes.png';
+import guarantee from './guarantee.svg';
+import HeroImage from './HeroImage.png';
+import hidden from './hidden.svg';
+import inc from './inc.png';
+import invest from './invest.svg';
+import lock from './lock.png';
+import logoLight from './logo-light.png';
+import messageText from './message-text.svg';
+import msn from './msn.png';
+import privacy from './privacy.svg';
+import service from './service.svg';
+import yahoo from './yahoo.png';
 
 export {
     logo,
@@ -59,5 +76,22 @@ export {
     other,
     employed,
     selfEmployed,
-    notEmployed
+    notEmployed,
+    closing,
+    complete,
+    footer1,
+    footer2,
+    forbes,
+    guarantee,
+    HeroImage,
+    hidden,
+    inc,
+    invest,
+    lock,
+    logoLight,
+    messageText,
+    msn,
+    privacy,
+    service,
+    yahoo
 }
