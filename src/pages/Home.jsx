@@ -1,5 +1,6 @@
 import { Card } from "primereact/card";
 import { useState } from "react";
+import { Navbar } from '../components/common'
 import {ProgressBar} from 'primereact/progressbar'
 import { homeOutline, refinance } from "../assets";
 import StepEight from "../components/PurchaseForm/StepEight";
@@ -167,7 +168,8 @@ const Home = () => {
             img: refinance
         }
     ]
-    return (
+    return (<div className="bg-blue-50">
+        <Navbar />
         <div className="steps">
             {
                 step > 1 &&
@@ -216,7 +218,7 @@ const Home = () => {
             }
             </div>
         </div>
-    )
+    </div>)
 }
 
 export default Home;

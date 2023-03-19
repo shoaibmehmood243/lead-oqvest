@@ -1,4 +1,5 @@
 import logo from './logo.png';
+import phoneCall from './phone-call.svg'
 import thanks from './thanks.png';
 import homeOutline from './home-outline.svg';
 import refinance from './refinance.svg';
@@ -45,9 +46,15 @@ import msn from './msn.png';
 import privacy from './privacy.svg';
 import service from './service.svg';
 import yahoo from './yahoo.png';
+import fb from './fb.svg'
+import insta from './insta.svg'
+import phoneLight from './phoneLight.svg'
+import msgLight from './msgLight.svg'
+import location from './locaton.svg'
 
 export {
     logo,
+    phoneCall,
     thanks,
     homeOutline,
     refinance,
@@ -93,5 +100,10 @@ export {
     msn,
     privacy,
     service,
-    yahoo
+    yahoo,
+    fb,
+    insta,
+    location,
+    phoneLight,
+    msgLight
 }

@@ -4,7 +4,8 @@ import { useState } from 'react';
 import {ProgressSpinner} from 'primereact/progressspinner'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-const URL = 'http://localhost:3000'
+const URL = 'https://lead-oqvest-api.vercel.app'
+// const URL = 'http://localhost:3000'
 
 const StepEighteenRef = ({formData, setFormData, step, setStep})=> {
     const [isClicked, setIsClicked] = useState(false);
@@ -17,7 +18,7 @@ const StepEighteenRef = ({formData, setFormData, step, setStep})=> {
             setIsClicked(false);
             if(res.data) {
                 setTimeout(()=> {
-                    navigate('thank-you')
+                    navigate('/thank-you')
                 }, 2000)
             }
         } catch (error) {
