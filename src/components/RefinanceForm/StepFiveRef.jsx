@@ -7,14 +7,14 @@ const formatPrice = (value) => {
   };
 
 const StepFiveRef = ({formData, setFormData, step, setStep})=> {
-    const [priceRange, setPriceRange] = useState(formData.purchasePrice);
+    const [priceRange, setPriceRange] = useState(formData.remainingMortage);
     const [inputValue, setInputValue] = useState(formatPrice(priceRange));
 
     const handleSlide = (event) => {
         const value = event.value;
         setInputValue(formatPrice(value));
         setPriceRange(value);
-        setFormData({...formData, purchasePrice: value})
+        setFormData({...formData, remainingMortage: value})
     };
     
     const handleInputChange = (event) => {
@@ -22,15 +22,15 @@ const StepFiveRef = ({formData, setFormData, step, setStep})=> {
         setInputValue(value);
         if (Number(value)) {
             const price = parseInt(value);
-            if(price > 1000000) {
-                setPriceRange(1000000);
-                setFormData({...formData, purchasePrice: 1000000})
-            } else if(price === 55000) {
-                setPriceRange(55000);
-                setFormData({...formData, purchasePrice: 55000})
+            if(price > 50) {
+                setPriceRange(50);
+                setFormData({...formData, remainingMortage: 50})
+            } else if(price === 25) {
+                setPriceRange(25);
+                setFormData({...formData, remainingMortage: 25})
             } else {
                 setPriceRange(price);
-                setFormData({...formData, purchasePrice: price})
+                setFormData({...formData, remainingMortage: price})
             }
         }
     };
@@ -40,12 +40,12 @@ const StepFiveRef = ({formData, setFormData, step, setStep})=> {
             <div className='w-full md:w-8 lg:w-8 m-auto text-center'>
                 <h1 className="text-900 text-4xl mb-6">What is the remaining 1st mortgage balance?</h1>
                 <div className="w-full md:w-8 lg:w-8 m-auto">
-                    <InputNumber min={55000} max={1000000} value={inputValue} onChange={(e)=>handleInputChange(e)} className="w-6 md:w-2" />
+                    <InputNumber min={25} max={50} value={inputValue} onChange={(e)=>handleInputChange(e)} className="w-6 md:w-2" />
                     <Slider
                         value={priceRange}
-                        step={50}
-                        min={55000}
-                        max={1000000}
+                        step={1}
+                        min={25}
+                        max={50}
                         onChange={handleSlide}
                         className='mt-4'
                     />

@@ -7,14 +7,14 @@ const formatPrice = (value) => {
   };
 
 const StepSixRef = ({formData, setFormData, step, setStep})=> {
-    const [priceRange, setPriceRange] = useState(formData.purchasePrice);
+    const [priceRange, setPriceRange] = useState(formData.mortageInterestRate);
     const [inputValue, setInputValue] = useState(formatPrice(priceRange));
 
     const handleSlide = (event) => {
         const value = event.value;
         setInputValue(formatPrice(value));
         setPriceRange(value);
-        setFormData({...formData, purchasePrice: value})
+        setFormData({...formData, mortageInterestRate: value})
     };
 
     const handleInputChange = (event) => {
@@ -24,13 +24,13 @@ const StepSixRef = ({formData, setFormData, step, setStep})=> {
             const price = parseInt(value);
             if(price > 1000000) {
                 setPriceRange(1000000);
-                setFormData({...formData, purchasePrice: 1000000})
+                setFormData({...formData, mortageInterestRate: 1000000})
             } else if(price === 55000) {
                 setPriceRange(55000);
-                setFormData({...formData, purchasePrice: 55000})
+                setFormData({...formData, mortageInterestRate: 55000})
             } else {
                 setPriceRange(price);
-                setFormData({...formData, purchasePrice: price})
+                setFormData({...formData, mortageInterestRate: price})
             }
         }
     };

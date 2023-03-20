@@ -7,14 +7,14 @@ const formatPrice = (value) => {
   };
 
 const StepTenRef = ({formData, setFormData, step, setStep})=> {
-    const [priceRange, setPriceRange] = useState(formData.householdIncome);
+    const [priceRange, setPriceRange] = useState(formData.additionalCash);
     const [inputValue, setInputValue] = useState(formatPrice(priceRange));
 
     const handleSlide = (event) => {
         const value = event.value;
         setInputValue(formatPrice(value));
         setPriceRange(value);
-        setFormData({...formData, householdIncome: value})
+        setFormData({...formData, additionalCash: value})
     };
     
     const handleInputChange = (event) => {
@@ -24,13 +24,13 @@ const StepTenRef = ({formData, setFormData, step, setStep})=> {
             const price = parseInt(value);
             if(price > 1000000) {
                 setPriceRange(1000000);
-                setFormData({...formData, householdIncome: 1000000})
+                setFormData({...formData, additionalCash: 1000000})
             } else if(price === 55000) {
                 setPriceRange(55000);
-                setFormData({...formData, householdIncome: 55000})
+                setFormData({...formData, additionalCash: 55000})
             } else {
                 setPriceRange(price);
-                setFormData({...formData, householdIncome: price})
+                setFormData({...formData, additionalCash: price})
             }
         }
     };

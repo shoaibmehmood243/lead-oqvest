@@ -4,7 +4,7 @@ import { Card } from 'primereact/card'
 import {Button} from 'primereact/button'
 
 const StepThreeRef = ({formData, setFormData, step, setStep})=> {
-    const [state, setState] = useState(formData.creditScore)
+    const [state, setState] = useState(formData.purchaseYear)
     const data = [
         {
             name: '2010-2023',
@@ -30,7 +30,7 @@ const StepThreeRef = ({formData, setFormData, step, setStep})=> {
                 <div className="grid max-w-full">
                     {
                         data.map((data, index)=> (
-                            <div className="col-6 md:col-6 lg:col-3" key={index} onClick={()=> {setState(data.name); setTimeout(()=> {setStep(step + 1)}, 1000); setFormData({...formData, creditScore: data.name})}}>
+                            <div className="col-6 md:col-6 lg:col-3" key={index} onClick={()=> {setState(data.name); setTimeout(()=> {setStep(step + 1)}, 1000); setFormData({...formData, purchaseYear: data.name})}}>
                                 <Card className={`cursor-pointer ${state === data.name ? 'active' : 'text-900'}`}>
                                     <img src={data.img} />
                                     <h6 className='text-xs m-0 mt-2'>{data.name}</h6>
