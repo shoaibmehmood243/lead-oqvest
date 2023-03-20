@@ -1,4 +1,4 @@
-import { closing, complete, forbes, guarantee, HeroImage, hidden, inc, invest, msn, privacy, service, yahoo } from "../assets";
+import { closing, complete, forbes, guarantee, HeroImage, hidden, inc, invest, messageText, msn, privacy, service, yahoo } from "../assets";
 import { Banner, Faqs, Footer, Header } from "../components/Home";
 import { Button } from 'primereact/button'
 import {Link} from 'react-router-dom'
@@ -11,7 +11,7 @@ const LandingPage = ()=> {
             text: "Fill out our straightforward form and submit your information."
         },
         {
-            img: complete,
+            img: messageText,
             title: "Consult a loan agent",
             text: "You'll get a call from a loan agent to go over your application."
         },

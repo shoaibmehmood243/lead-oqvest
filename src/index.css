@@ -44,6 +44,9 @@ border-radius: 9.42926px !important;
 
 .steps .p-button {
     border: 1px solid #222D39 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .steps .p-button-outlined {
@@ -330,6 +333,9 @@ footer .links a {
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
     }
+    .grid-app {
+        grid-template-columns: repeat(2, 1fr);
+    }
     .faqs {
         width: 65%;
     }
@@ -345,6 +351,9 @@ footer .links a {
     .header div {
         position: relative;
     }
+    .steps .p-progressbar {
+        width: 70%;
+    }
 }
 
 @media screen and (max-width: 575px) {
@@ -352,7 +361,9 @@ footer .links a {
         grid-template-columns: repeat(1, 1fr);
         gap: 10px;
     }
-
+    .grid-app {
+        grid-template-columns: repeat(1, 1fr);
+    }
     .faqs {
         width: 80%;
     }
@@ -372,5 +383,8 @@ footer .links a {
     }
     .header p {
         font-size: 10px;
+    }
+    .steps .p-progressbar {
+        width: 80%;
     }
 }

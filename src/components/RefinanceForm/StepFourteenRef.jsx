@@ -37,10 +37,10 @@ const StepFourteenRef = ({formData, setFormData, step, setStep})=> {
 
     return (
         <div>
-            <div className='w-8 m-auto text-center'>
+            <div className='w-12 md:w-10 lg:w-8 m-auto text-center'>
                 <h1 className="text-900 text-4xl mb-6">What is your average monthly income?</h1>
-                <div className="w-8 m-auto">
-                    <InputNumber min={0} max={50000} value={inputValue} onChange={(e)=>handleInputChange(e)} className="w-2" />
+                <div className="w-12 md:w-10 lg:w-8 m-auto">
+                    <InputNumber min={0} max={50000} value={inputValue} onChange={(e)=>handleInputChange(e)} className="w-6 md:w-2s" />
                     <Slider
                         value={priceRange}
                         step={50}

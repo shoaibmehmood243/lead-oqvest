@@ -28,7 +28,7 @@
                   <h1 className="text-900 text-4xl mb-6">What is your email address ?</h1>
                   <form>
                   <div>
-                      <InputText value={formData.email} onChange={(e)=> setFormData({...formData, email: e.target.value})} type="text" className="p-inputtext-lg w-6" placeholder="Enter your email here" />
+                      <InputText value={formData.email} onChange={(e)=> setFormData({...formData, email: e.target.value})} type="text" className="p-inputtext-lg w-12 md:w-8 lg:w-6" placeholder="Enter your email here" />
                   </div>
                   <div className="text-center mt-3">
                   {emailError && <Message severity="error" text={emailError} />}

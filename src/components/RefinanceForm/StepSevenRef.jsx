@@ -21,12 +21,12 @@ const StepSevenRef = ({formData, setFormData, step, setStep})=> {
     ]
     return (
         <div>
-            <div className='w-8 m-auto text-center'>
+            <div className='w-8 md:w-8 lg:w-8 m-auto text-center'>
                 <h1 className="text-900 text-4xl mb-6">How will this property be used??</h1>
                 <div className="grid max-w-full">
                     {
                         data.map((data, index)=> (
-                            <div key={index} onClick={()=> {setState(data.name); setTimeout(()=> {setStep(step + 1)}, 1000); setFormData({...formData, propertyUsed: data.name})}} className='col-4'>
+                            <div key={index} onClick={()=> {setState(data.name); setTimeout(()=> {setStep(step + 1)}, 1000); setFormData({...formData, propertyUsed: data.name})}} className='col-12 md:col-6 lg:col-4'>
                                 <Card className={`cursor-pointer ${state === data.name ? 'active' : 'text-900'}`}>
                                     <img src={data.img} />
                                     <h6 className='text-xs m-0 mt-2'>{data.name}</h6>

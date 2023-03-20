@@ -33,7 +33,7 @@ const StepSeventeen = ({formData, setFormData, step, setStep})=> {
                 <h1 className="text-900 text-4xl mb-6">What is your phone number ?</h1>
                 <form onSubmit={handleSubmit}>
                     <div>
-                        <InputMask mask="(999) 999-9999" value={formData.number} onChange={(e)=> setFormData({...formData, number: e.target.value})} type="text" className="p-inputtext-lg w-6" placeholder="Enter your phone number" />
+                        <InputMask mask="(999) 999-9999" value={formData.number} onChange={(e)=> setFormData({...formData, number: e.target.value})} type="text" className="p-inputtext-lg w-12 md:w-8 lg:w-6" placeholder="Enter your phone number" />
                     </div>
                     <div className="mt-6 flex align-items-center justify-content-center gap-4">
                         <Button type="button" onClick={()=> setStep(step-1)} label="Back" className="px-6" outlined />

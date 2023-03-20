@@ -17,7 +17,7 @@ const StepFifteenRef = ({formData, setFormData, step, setStep})=> {
     ]
     return (
         <div>
-            <div className='w-5 m-auto text-center'>
+            <div className='w-10 md:w-7 lg:w-5 m-auto text-center'>
                 <h1 className="text-900 text-4xl mb-6">Do you currently have a FHA loan?</h1>
                 <div className="grid max-w-full">
                     {
@@ -31,7 +31,7 @@ const StepFifteenRef = ({formData, setFormData, step, setStep})=> {
                         ))
                     }
                 </div>
-                <div className="mt-6">
+                <div className="mt-6  flex justify-content-center">
                     <Button onClick={()=> setStep(step-1)} label="Back" className="px-6" outlined />
                 </div>
             </div>
