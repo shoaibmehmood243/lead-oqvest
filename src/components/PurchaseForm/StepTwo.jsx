@@ -43,7 +43,7 @@ const StepTwo = ({formData, setFormData, step, setStep})=> {
                         ))
                     }
                 </div>
-                <div className="mt-6">
+                <div className="mt-6 flex align-items-center justify-content-center">
                     <Button onClick={()=> {setStep(step-1); setFormData({...formData, homeType: ''})}} label="Back" className="px-6" outlined />
                 </div>
             </div>

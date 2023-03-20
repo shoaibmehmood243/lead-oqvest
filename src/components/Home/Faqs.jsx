@@ -1,4 +1,6 @@
-const Faqs = ()=> {
+import { useState } from 'react';
+
+const Faqs = () => {
     const data = [
         {
             title: 'How can I obtain the lowest possible rates for a DSCR loan?',
@@ -21,23 +23,39 @@ const Faqs = ()=> {
             text: 'Yes, we offer free consultation calls with our loan officers that have a lot of DSCR loan procedure experience. They can offer you professional advise and direction on how to get the best loan for your rental property.'
         },
     ]
+    const [expandedItems, setExpandedItems] = useState([]);
+
+    const toggleItem = (index) => {
+        if (expandedItems.includes(index)) {
+            setExpandedItems(expandedItems.filter((i) => i !== index));
+        } else {
+            setExpandedItems([...expandedItems, index]);
+        }
+    };
+
     return (
         <div>
-            {
-                data.map((data)=> (
-                    <div className="faq-item">
-                        <div className="flex align-items-center gap-3">
-                            <span style={{marginTop: '-18px', fontWeight: '600'}}>_</span>
-                            <h3 className="m-0">{data.title}</h3>
-                        </div>
-                        <div className="item-text">
-                            <p>{data.text}</p>
-                        </div>
+            {data.map((item, index) => (
+                <div
+                    key={index}
+                    className={`faq-item`}
+                >
+                    <div
+                        className="flex align-items-center gap-3 cursor-pointer pt-2 pb-4"
+                        onClick={() => toggleItem(index)}
+                    >
+                        <span style={{ fontWeight: '600', color: '#0CBC8B' }}>{expandedItems.includes(index) ? '_' : '+'}</span>
+                        <h3 className="m-0">{item.title}</h3>
                     </div>
-                ))
-            }
+                    {expandedItems.includes(index) && (
+                        <div className="item-text">
+                            <p>{item.text}</p>
+                        </div>
+                    )}
+                </div>
+            ))}
         </div>
-    )
-}
+    );
+};
 
 export default Faqs;

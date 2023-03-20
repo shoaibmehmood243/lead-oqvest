@@ -1,9 +1,16 @@
 import { closing, complete, forbes, guarantee, HeroImage, hidden, inc, invest, messageText, msn, privacy, service, yahoo } from "../assets";
 import { Banner, Faqs, Footer, Header } from "../components/Home";
 import { Button } from 'primereact/button'
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import { Carousel } from 'primereact/carousel';
 
 const LandingPage = ()=> {
+    const images = [
+        {src: yahoo},
+        {src: forbes},
+        {src: inc},
+        {src: msn},
+    ]
     const quickData = [
         {
             img: complete,
@@ -48,6 +55,30 @@ const LandingPage = ()=> {
             text: "We know the importance of privacy. So we give privacy top priority. We do not share any sensitive information of our clients to any third party. All the information you put on our website is safe and secure"
         },
     ]
+    const template = (image) => {
+        return (
+            <div className="text-center">
+                <img src={image.src} alt="carousel-image" />
+            </div>
+        );
+    }
+    const responsiveOptions = [
+        {
+            breakpoint: '1024px',
+            numVisible: 3,
+            numScroll: 3
+        },
+        {
+            breakpoint: '768px',
+            numVisible: 2,
+            numScroll: 2
+        },
+        {
+            breakpoint: '560px',
+            numVisible: 1,
+            numScroll: 1
+        }
+    ];
     return (<>
         <Banner />
         <Header />
@@ -95,19 +126,20 @@ const LandingPage = ()=> {
         </div>
         <div className="featured">
             <h2 className="mb-6">Featured In</h2>
-            <div className="images">
-                <div className="text-center">
-                    <img src={yahoo} />
-                </div>
-                <div className="text-center">
-                    <img src={forbes} />
-                </div>
-                <div className="text-center">
-                    <img src={inc} />
-                </div>
-                <div className="text-center">
-                    <img src={msn} />
-                </div>
+            <div style={{maxWidth: '100vw'}} className="images">
+                <Carousel
+                    value={images}
+                    itemTemplate={template}
+                    responsiveOptions={responsiveOptions}
+                    circular={true}
+                    autoplayInterval={3000}
+                    numVisible={4}
+                    numScroll={1}
+                    orientation="horizontal"
+                    verticalViewPortHeight="100%"
+                    showIndicators={false}
+                    showNavigators={false}
+                />
             </div>
             <div className="flex justify-content-center my-5">
                 <Link style={{textDecoration: 'none'}} to="lead">
