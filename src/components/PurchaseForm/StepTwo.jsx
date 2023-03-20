@@ -36,7 +36,7 @@ const StepTwo = ({formData, setFormData, step, setStep})=> {
                         data.map((data, index)=> (
                             <div key={index} onClick={()=> {setState(data.name); setTimeout(()=> {setStep(step + 1)}, 1000); setFormData({...formData, propertyType: data.name})}}>
                                 <Card className={`cursor-pointer ${state === data.name ? 'active' : 'text-900'}`}>
-                                    <img src={data.img} />
+                                    <img height={46} src={data.img} />
                                     <h6 className='text-xs m-0 mt-2'>{data.name}</h6>
                                 </Card>
                             </div>

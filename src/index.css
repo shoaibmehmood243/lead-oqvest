@@ -18,6 +18,22 @@
 .steps .p-card {
     box-shadow: 0px -10.9365px 51.466px rgba(0, 0, 0, 0.07), 0px -4.56902px 21.5012px rgba(0, 0, 0, 0.0503198), 0px -2.44281px 11.4956px rgba(0, 0, 0, 0.0417275), 0px -1.36942px 6.44434px rgba(0, 0, 0, 0.035), 0px -0.72729px 3.42254px rgba(0, 0, 0, 0.0282725), 0px -0.302641px 1.4242px rgba(0, 0, 0, 0.0196802);
 border-radius: 9.42926px !important;
+width: 180px;
+height: 160px;
+margin: auto;
+display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.steps .p-card .p-card-content {
+    padding: 0;
+}
+
+.steps .p-card .p-component {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .p-card:hover, .active {
@@ -56,6 +72,7 @@ border-radius: 9.42926px !important;
 
 .steps .p-button:enabled:hover, .p-button:not(button):not(a):not(.p-disabled):hover {
     background-color: #222D39 !important;
+    color: #fff !important;
 }
 
 .steps .p-slider {
@@ -303,6 +320,10 @@ color: #3E3E3E;
     font-weight: 600;
     font-size: 16px;
     color: #222D39;
+}
+
+.thanks .p-button {
+    color: #E98862;
 }
 
 /* Footer */
