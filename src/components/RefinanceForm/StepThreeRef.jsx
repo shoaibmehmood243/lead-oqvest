@@ -27,7 +27,7 @@ const StepThreeRef = ({formData, setFormData, step, setStep})=> {
         <div>
             <div className='w-12 md:w-10 lg:w-8 m-auto text-center'>
                 <h1 className="text-900 text-4xl mb-6">What year did you purchase your home?</h1>
-                <div className="grid max-w-full">
+                <div className="grid max-w-full m-auto w-full lg:w-10">
                     {
                         data.map((data, index)=> (
                             <div className="col-6 md:col-6 lg:col-3" key={index} onClick={()=> {setState(data.name); setTimeout(()=> {setStep(step + 1)}, 1000); setFormData({...formData, purchaseYear: data.name})}}>

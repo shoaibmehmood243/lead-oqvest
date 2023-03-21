@@ -19,7 +19,7 @@ const StepThirteenRef = ({formData, setFormData, step, setStep})=> {
         <div>
             <div className='w-10 md:w-7 lg:w-5 m-auto text-center'>
                 <h1 className="text-900 text-4xl mb-6">Can you show proof of income?</h1>
-                <div className="grid max-w-full">
+                <div className="grid max-w-full m-auto w-full lg:w-9">
                     {
                         data.map((data, index)=> (
                             <div key={index} onClick={()=> {setState(data.name); setTimeout(()=> {setStep(step + 1)}, 1000); setFormData({...formData, incomeProof: data.name})}} className='col-6'>

@@ -23,7 +23,7 @@ const StepSevenRef = ({formData, setFormData, step, setStep})=> {
         <div>
             <div className='w-8 md:w-8 lg:w-6 m-auto text-center'>
                 <h1 className="text-900 text-4xl mb-6">How will this property be used??</h1>
-                <div className="grid max-w-full">
+                <div className="grid max-w-full m-auto w-full lg:w-10">
                     {
                         data.map((data, index)=> (
                             <div key={index} onClick={()=> {setState(data.name); setTimeout(()=> {setStep(step + 1)}, 1000); setFormData({...formData, propertyUsed: data.name})}} className='col-12 md:col-6 lg:col-4'>

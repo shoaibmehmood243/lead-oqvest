@@ -10,10 +10,10 @@ const Footer = ()=> {
                         <p style={{letterSpacing: '1px'}} className='mb-6 text-sm'><img src={lock} /> Your information is protected by SSL encryption. By submitting this contact request you expressly consent OQVEST may contact you by telephone, email, or direct mail even if you have previously registered on a Do Not Call registry or have previously requested that OQVEST not contact you for solicitation purposes.</p>
                         <p>Stay Connected</p>
                         <div className='flex gap-3'>
-                            <a target='_blank' href='https://www.facebook.com/'>
+                            <a target='_blank' href='https://www.facebook.com/oqvest'>
                                 <img src={fb} />
                             </a>
-                            <a target='_blank' href='https://www.instagram.com/'>
+                            <a target='_blank' href='https://www.instagram.com/oqvest'>
                                 <img src={insta} />
                             </a>
                         </div>
