@@ -17,9 +17,9 @@ const StepFifteenRef = ({formData, setFormData, step, setStep})=> {
     ]
     return (
         <div>
-            <div className='w-10 md:w-7 lg:w-5 m-auto text-center'>
+            <div className='w-full md:w-10 lg:w-9 m-auto text-center'>
                 <h1 className="text-900 text-4xl mb-6">Do you currently have a FHA loan?</h1>
-                <div className="grid max-w-full m-auto w-full lg:w-9">
+                <div className="grid max-w-full m-auto w-full lg:w-26rem">
                     {
                         data.map((data, index)=> (
                             <div key={index} onClick={()=> {setState(data.name); setTimeout(()=> {setStep(step + 1)}, 1000); setFormData({...formData, fhaLoan: data.name})}} className='col-6'>

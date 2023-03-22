@@ -25,9 +25,9 @@ const StepOneRef = ({formData, setFormData, step, setStep})=> {
     ]
     return (
         <div>
-            <div className='w-12 md:w-10 lg:w-8 m-auto text-center'>
+            <div className='w-12 md:w-11 lg:w-11 m-auto text-center'>
                 <h1 className="text-900 text-4xl mb-6">Great! What type of property are you refinancing?</h1>
-                <div className="grid max-w-full m-auto w-full lg:w-10">
+                <div className="grid max-w-full m-auto w-full lg:w-full">
                     {
                         data.map((data, index)=> (
                             <div key={index} onClick={()=> {setState(data.name); setTimeout(()=> {setStep(step + 1)}, 1000); setFormData({...formData, propertyType: data.name})}} className='col-6 md:col-6 lg:col-3'>

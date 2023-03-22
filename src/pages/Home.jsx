@@ -1,7 +1,7 @@
 import { Card } from "primereact/card";
 import { useState } from "react";
 import { Navbar } from '../components/common'
-import {ProgressBar} from 'primereact/progressbar'
+import { ProgressBar } from 'primereact/progressbar'
 import { homeOutline, refinance } from "../assets";
 import StepEight from "../components/PurchaseForm/StepEight";
 import StepEleven from "../components/PurchaseForm/StepEleven";
@@ -78,12 +78,12 @@ const Home = () => {
     };
 
     const renderStep = () => {
-        if(formData.homeType === 'Purchase') {
+        if (formData.homeType === 'Purchase') {
             switch (step) {
                 // case 1:
                 //     return <StepOne handleChange={handleChange} step={step} setStep={setStep} formData={formData} setFormData={setFormData} />;
                 case 2:
-                return <StepTwo handleChange={handleChange} step={step} setStep={setStep} formData={formData} setFormData={setFormData} />;
+                    return <StepTwo handleChange={handleChange} step={step} setStep={setStep} formData={formData} setFormData={setFormData} />;
                 case 3:
                     return <StepThree handleChange={handleChange} step={step} setStep={setStep} formData={formData} setFormData={setFormData} />;
                 case 4:
@@ -117,10 +117,10 @@ const Home = () => {
                 case 18:
                     return <StepSeventeen handleChange={handleChange} step={step} setStep={setStep} formData={formData} setFormData={setFormData} />;
                 default:
-                return null;
-            } 
-        } else if(formData.homeType === 'Refinance') {
-            switch(step) {
+                    return null;
+            }
+        } else if (formData.homeType === 'Refinance') {
+            switch (step) {
                 case 2:
                     return <StepOneRef handleChange={handleChange} step={step} setStep={setStep} formData={formData} setFormData={setFormData} />;
                 case 3:
@@ -161,10 +161,10 @@ const Home = () => {
                     return <StepEighteenRef handleChange={handleChange} step={step} setStep={setStep} formData={formData} setFormData={setFormData} />;
                 default:
                     return null
-            }            
+            }
         }
-      };
-      const [state, setState] = useState(formData.homeType)
+    };
+    const [state, setState] = useState(formData.homeType)
     const data = [
         {
             name: 'Purchase',
@@ -178,51 +178,53 @@ const Home = () => {
     return (<div className="bg-blue-50">
         <Navbar />
         <div className="steps">
-            {
-                step > 1 &&
+            <div>
+                {
+                    step > 1 &&
                     <ProgressBar value={
-                        step === 2 ? 5 : 
-                        step === 3 ? 12 : 
-                        step === 4 ? 18 : 
-                        step === 5 ? 24 :
-                        step === 6 ? 29 :
-                        step === 7 ? 35 : 
-                        step === 8 ? 41 :
-                        step === 9 ? 47 :
-                        step === 10 ? 53 :
-                        step === 11 ? 59 :
-                        step === 12 ? 65 :
-                        step === 13 ? 71 :
-                        step === 14 ? 76 :
-                        step === 15 ? 82 :
-                        step === 16 ? 88 :
-                        step === 17 ? 94 : 100
+                        step === 2 ? 5 :
+                            step === 3 ? 12 :
+                                step === 4 ? 18 :
+                                    step === 5 ? 24 :
+                                        step === 6 ? 29 :
+                                            step === 7 ? 35 :
+                                                step === 8 ? 41 :
+                                                    step === 9 ? 47 :
+                                                        step === 10 ? 53 :
+                                                            step === 11 ? 59 :
+                                                                step === 12 ? 65 :
+                                                                    step === 13 ? 71 :
+                                                                        step === 14 ? 76 :
+                                                                            step === 15 ? 82 :
+                                                                                step === 16 ? 88 :
+                                                                                    step === 17 ? 94 : 100
                     } />
-            }
-            <div className="step-in">
-            {
-                formData.homeType === '' ? (
-                    <div>
-                        <div className='w-9 md:w-7 lg:w-5 m-auto text-center'>
-                            <h1 className='text-900 text-4xl my-5'>What type of loan do you need??</h1>
-                            <div className="grid w-full md:w-8 lg:w-10 m-auto max-w-full">
-                                {
-                                    data.map((data, index)=> (
-                                        <div key={index} onClick={()=> {setState(data.name); setTimeout(()=> {setStep(step +1)}, 1000); setFormData({...formData, homeType: data.name})}} className={`col-12 md:col-6`}>
-                                            <Card className={`cursor-pointer py-3 ${state === data.name ? 'active' : 'text-900'}`}>
-                                                <img src={data.img} />
-                                                <h6 className='text-lg m-0 mt-2'>Home {data.name}</h6>
-                                            </Card>
-                                        </div>
-                                    ))
-                                }
+                }
+                <div className="step-in">
+                    {
+                        formData.homeType === '' ? (
+                            <div>
+                                <div className='w-full md:w-11 lg:w-10 m-auto text-center'>
+                                    <h1 className='text-900 text-4xl my-5'>What type of loan do you need??</h1>
+                                    <div className="grid w-full lg:w-26rem m-auto max-w-full">
+                                        {
+                                            data.map((data, index) => (
+                                                <div key={index} onClick={() => { setState(data.name); setTimeout(() => { setStep(step + 1) }, 1000); setFormData({ ...formData, homeType: data.name }) }} className={`col-12 md:col-6`}>
+                                                    <Card className={`cursor-pointer py-3 ${state === data.name ? 'active' : 'text-900'}`}>
+                                                        <img src={data.img} />
+                                                        <p className='text-lg font-semibold m-0 mt-2'>Home {data.name}</p>
+                                                    </Card>
+                                                </div>
+                                            ))
+                                        }
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                ) : (
-                    renderStep()
-                )
-            }
+                        ) : (
+                            renderStep()
+                        )
+                    }
+                </div>
             </div>
         </div>
     </div>)

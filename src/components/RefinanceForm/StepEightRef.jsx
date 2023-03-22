@@ -17,15 +17,15 @@ const StepEightRef = ({formData, setFormData, step, setStep})=> {
     ]
     return (
         <div>
-            <div className='w-10 md:w-7 lg:w-5 m-auto text-center'>
+            <div className='w-11 md:w-11 lg:w-10 m-auto text-center'>
                 <h1 className="text-900 text-4xl mb-6">What kind of rate do you prefer?</h1>
-                <div className="grid max-w-full m-auto w-full lg:w-8">
+                <div className="grid max-w-full m-auto w-full lg:w-26rem">
                     {
                         data.map((data, index)=> (
                             <div key={index} onClick={()=> {setState(data.name); setTimeout(()=> {setStep(step +1)}, 1000); setFormData({...formData, rateKind: data.name})}} className={`col-6`}>
                                 <Card className={`cursor-pointer py-3 ${state === data.name ? 'active' : 'text-900'}`}>
                                     <img src={data.img} />
-                                    <h6 className='text-xl m-0 mt-2'>{data.name}</h6>
+                                    <p className='text-xl font-semibold m-0 mt-2'>{data.name}</p>
                                 </Card>
                             </div>
                         ))

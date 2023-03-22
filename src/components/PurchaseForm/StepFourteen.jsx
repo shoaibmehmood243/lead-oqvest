@@ -17,9 +17,9 @@ const StepFourteen = ({formData, setFormData, step, setStep})=> {
     ]
     return (
         <div>
-            <div className='w-9 md:w-3 lg:w-5 m-auto text-center'>
+            <div className='w-11 md:w-10 lg:w-10 m-auto text-center'>
                 <h1 className="text-900 text-4xl mb-6">Are you working with a real estate agent??</h1>
-                <div className="grid max-w-full m-auto w-full lg:w-9">
+                <div className="grid max-w-full m-auto w-full lg:w-26rem">
                     {
                         data.map((data, index)=> (
                             <div key={index} onClick={()=> {setState(data.name); setTimeout(()=> {setStep(step + 1)}, 1000); setFormData({...formData, agentAssociated: data.name})}} className='col-6'>
