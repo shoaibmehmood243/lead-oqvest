@@ -67,7 +67,8 @@ const Home = () => {
         fhaLoan: '',
         zipCode: '',
         name: '',
-        email: ''
+        email: '',
+        number: ''
     });
 
     const handleChange = (event) => {
