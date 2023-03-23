@@ -1,4 +1,4 @@
-import { closing, complete, forbes, guarantee, HeroImage, hidden, inc, invest, messageText, msn, privacy, service, yahoo } from "../assets";
+import { closing, complete, forbes, guarantee, hero1, hero2, hero3, hero4, HeroImage, hidden, inc, invest, messageText, msn, privacy, service, yahoo } from "../assets";
 import { Banner, Faqs, Footer, Header } from "../components/Home";
 import { Button } from 'primereact/button'
 import {Link} from 'react-router-dom';
@@ -84,8 +84,14 @@ const LandingPage = ()=> {
         <Header />
         <div className="grid max-w-full m-0 md:relative hero-section">
             <div className="col-12 md:col-6 hero-text px-4 md:px-8">
-                <h1>In just <strong className="st-1">two weeks</strong>, real estate investors can get funded without providing <strong className="st-2">pay stubs, W-2s, tax returns, or income verification.</strong></h1>
-                <p>"Our technology offers hassle-free options to help you find the best rates quickly and easily."</p>
+                <h1><strong className="st-2">Invest</strong> in <strong className="st-1">Real EState</strong> with ease:</h1>
+                <ul className="items">
+                    <li><img src={hero1} /> Leverage your rental income to expand your investment portfolio</li>
+                    <li><img src={hero2} /> No income or employment verification</li>
+                    <li><img src={hero3} /> Borrow up to 85% of home value</li>
+                    <li><img src={hero4} /> Close in LLC</li>
+                </ul>
+                <p>"Our technology offers hassle-free options to help you find the <span style={{color: '#0CBC8B'}}>best rates</span> quickly and easily."</p>
                 <Link style={{textDecoration: 'none'}} to="lead">
                     <Button label="Paperless & Quick - Apply Now!" />
                 </Link>

@@ -51,6 +51,10 @@ import insta from './insta.svg'
 import phoneLight from './phoneLight.svg'
 import msgLight from './msgLight.svg'
 import location from './locaton.svg'
+import hero1 from './hero1.svg'
+import hero2 from './hero2.svg'
+import hero3 from './hero3.svg'
+import hero4 from './hero4.svg'
 
 export {
     logo,
@@ -105,5 +109,9 @@ export {
     insta,
     location,
     phoneLight,
-    msgLight
+    msgLight,
+    hero1,
+    hero2,
+    hero3,
+    hero4
 }
