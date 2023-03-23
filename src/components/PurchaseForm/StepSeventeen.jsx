@@ -8,7 +8,7 @@ const URL = 'https://lead-oqvest-api.vercel.app'
 // const URL = 'http://localhost:3000'
 
 const StepSeventeen = ({formData, setFormData, step, setStep})=> {
-    const [isClicked, setIsClicked] = useState(true);
+    const [isClicked, setIsClicked] = useState(false);
     const navigate = useNavigate()
     const handleSubmit = async (event) => {
         event.preventDefault();

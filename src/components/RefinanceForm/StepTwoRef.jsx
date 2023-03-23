@@ -15,16 +15,12 @@ const StepTwoRef = ({formData, setFormData, step, setStep})=> {
             img: faceSmile2
         },
         {
-            name: 'Good 700-739',
-            img: faceSmile3
-        },
-        {
             name: 'Fair 600-659',
-            img: sad1
+            img: sad2
         },
         {
             name: 'Poor < 600',
-            img: sad2
+            img: sad1
         }
     ]
     return (

@@ -20,7 +20,7 @@ const StepThreeRef = ({formData, setFormData, step, setStep})=> {
         },
         {
             name: 'Before 1990',
-            img: sad1
+            img: sad2
         }
     ]
     return (
