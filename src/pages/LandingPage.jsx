@@ -32,27 +32,27 @@ const LandingPage = ()=> {
         {
             img: guarantee,
             title: "Low rate Guarantee",
-            text: "A home can be a great place to live and to raise a family, but it can also be overwhelmingly expensive. We offer low-interest loan deals to our customers who are going to purchase a home. It helps them to chase their dream of new home."
+            text: "Oqvest offers the lowest rates in the market, thanks to our commitment to transparency and honesty. We negotiate the most competitive rates on your behalf, so you can save money and achieve your homeownership goals."
         },
         {
             img: service,
             title: "Personalized Service",
-            text: "We consider our customers as our family. So we take everyone’s case like our own case. Our personalized services help our clients to get the best of best for them in market competetive rates."
+            text: "Oqvest takes a personalized approach to mortgage lending, taking the time to understand your unique needs and goals. We offer customized solutions to help you achieve your homeownership dreams."
         },
         {
             img: closing,
             title: "On-time Closing",
-            text: "We make sure you close on your loan on time. We’re so confident in our process that we’ve backed it with our $1,000 On-Time Closing Guarantee which no one guarentee"
+            text: "At Oqvest, we understand the importance of closing on time. We have a proven track record of success in the market and are committed to meeting your closing date. With our efficient and effective service, you can count on a timely closing for your mortgage."
         },
         {
             img: hidden,
             title: "No Hidden/Junk Fees",
-            text: "We respect customer values. So, we don’t do any diplomacy which hurts our customers. Our mentioned pricing is all and we don’t charge any hidden or junk fee."
+            text: "Oqvest is committed to transparency and honesty. We never charge hidden or junk fees and always provide clear and accurate breakdowns of all costs and fees, ensuring a fair and straightforward deal every time."
         },
         {
             img: privacy,
             title: "Privacy Pledge",
-            text: "We know the importance of privacy. So we give privacy top priority. We do not share any sensitive information of our clients to any third party. All the information you put on our website is safe and secure"
+            text: "Oqvest takes your privacy seriously and pledges to keep your personal information secure and confidential at all times. You can trust that we adhere to strict privacy policies and take every precaution to ensure your data is protected."
         },
     ]
     const template = (image) => {
@@ -105,8 +105,8 @@ const LandingPage = ()=> {
                 <h2 className="mb-6">It’s as quick as...</h2>
                 <div className="grid-service">
                     {
-                        quickData.map((data)=> (
-                            <div className="quick-card">
+                        quickData.map((data, i)=> (
+                            <div key={i} className="quick-card">
                                 <img width={55} height={66} src={data.img} />
                                 <h3>{data.title}</h3>
                                 <p>{data.text}</p>
@@ -119,8 +119,8 @@ const LandingPage = ()=> {
                 <h2 className="mb-6 mt-8">Why Choose Us???</h2>
                 <div className="grid-service">
                     {
-                        chooseData.map((data)=> (
-                            <div className="quick-card-2">
+                        chooseData.map((data, i)=> (
+                            <div key={i} className="quick-card-2">
                                 <img width={55} height={66} src={data.img} />
                                 <h3>{data.title}</h3>
                                 <p>{data.text}</p>

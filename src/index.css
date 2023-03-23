@@ -178,11 +178,11 @@ line-height: 50px;
 .hero-text .items li {
     list-style: none;
     font-style: italic;
-    font-size: 13px;
+    font-size: 13.8px;
     display: flex;
     font-weight: 500;
     gap: 8px;
-    margin: 5px 0px;
+    margin: 8px 0px;
 }
 
 .hero-text p {
@@ -228,11 +228,16 @@ color: #222D39;
 }
 
 .grid-service {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-}
+    gap: 30px;
+  }
+  
+  .grid-service > * {
+    flex-basis: calc(33.33% - 10px);
+    max-width: calc(30.33% - 10px);
+  }  
 
 .grid-service p {
     font-size: 14px;
@@ -247,7 +252,7 @@ color: #222D39;
 
 .quick-card-2 {
     border-top: 4px solid #000;
-    padding: 25px 40px;
+    padding: 25px;
     background: #FFFFFF;
     border-radius: 5px 5px 20px 20px;
     box-shadow: 0px -7px 193px rgba(116, 193, 234, 0.11), 0px -2.92443px 80.6308px rgba(116, 193, 234, 0.079074), 0px -1.56354px 43.1091px rgba(116, 193, 234, 0.0655718), 0px -0.876509px 24.1666px rgba(116, 193, 234, 0.055), 0px -0.465507px 12.8347px rgba(116, 193, 234, 0.0444282), 0px -0.193708px 5.34081px rgba(116, 193, 234, 0.030926);
@@ -270,6 +275,12 @@ color: #222D39;
     grid-template-columns: repeat(4, 1fr);
     justify-content: center;
     align-items: center;
+}
+
+.featured .p-carousel {
+    max-width: 100%;
+    width: 70%;
+    margin: auto;
 }
 
 .featured .images .p-carousel-items-content {
@@ -416,9 +427,6 @@ footer a {
     .featured .images {
         grid-template-columns: repeat(2, 1fr);
     }
-    .grid-service {
-        grid-template-columns: repeat(2, 1fr);
-    }
     .image-div {
         display: none;
     }
@@ -427,6 +435,13 @@ footer a {
     }
     .steps .p-progressbar {
         width: 70%;
+    }
+    .grid-service > * {
+        flex-basis: calc(45.33% - 10px);
+        max-width: calc(50.33% - 10px);
+    }
+    .quick-card-2 {
+        padding: 25px 15px;
     }
 }
 
@@ -445,8 +460,9 @@ footer a {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
-    .grid-service {
-        grid-template-columns: repeat(1, 1fr);
+    .grid-service > * {
+        flex-basis: calc(100% - 10px);
+        max-width: calc(100% - 10px);
     }
     .hero-text h1 {
         font-size: 20px;
