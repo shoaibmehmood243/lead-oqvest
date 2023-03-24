@@ -39,7 +39,7 @@ const StepTenRef = ({formData, setFormData, step, setStep})=> {
         <div>
             <div className='w-12 md:w-11 lg:w-full m-auto text-center'>
                 <h1 className="text-900 text-4xl mb-6">Would you like to borrow additional cash?</h1>
-                <div className="w-12 md:w-10 lg:w-10 m-auto">
+                <div className="w-12 md:w-10 lg:w-10 m-auto animate">
                     <InputNumber min={55000} max={1000000} value={inputValue} onChange={(e)=>handleInputChange(e)} className="w-6 md:w-4" />
                     <Slider
                         value={priceRange}

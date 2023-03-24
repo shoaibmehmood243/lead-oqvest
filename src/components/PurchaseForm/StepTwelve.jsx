@@ -19,7 +19,7 @@ const StepTwelve = ({formData, setFormData, step, setStep})=> {
         <div>
             <div className='w-full md:w-11 lg:w-10 m-auto text-center'>
                 <h1 className="text-900 text-4xl mb-6">Bankruptcy, short sale, or foreclosure in the last 3 years?</h1>
-                <div className="grid max-w-full m-auto w-full lg:w-28rem">
+                <div className="grid max-w-full m-auto w-full lg:w-28rem animate">
                     {
                         data.map((data, index)=> (
                             <div key={index} onClick={()=> {setState(data.name); setTimeout(()=> {setStep(step + 1)}, 500); setFormData({...formData, isFirstPurcase: data.name})}} className='col-6'>

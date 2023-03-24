@@ -39,7 +39,7 @@ const StepFiveRef = ({formData, setFormData, step, setStep})=> {
         <div>
             <div className='w-full md:w-11 lg:w-11 m-auto text-center'>
                 <h1 className="text-900 text-4xl mb-6">What is the remaining 1st mortgage balance?</h1>
-                <div className="w-full md:w-11 lg:w-11 m-auto">
+                <div className="w-full md:w-11 lg:w-11 m-auto animate">
                     <InputNumber min={25} max={50} value={inputValue} onChange={(e)=>handleInputChange(e)} className="w-6 md:w-4" />
                     <Slider
                         value={priceRange}

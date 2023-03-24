@@ -39,7 +39,7 @@ const StepSeven = ({formData, setFormData, step, setStep})=> {
         <div>
             <div className='w-full md:w-11 lg:w-10 m-auto text-center'>
                 <h1 className="text-900 text-4xl mb-6">What is the Purchase price of new property?</h1>
-                <div className="w-full md:w-8 lg:w-11 m-auto">
+                <div className="w-full md:w-8 lg:w-11 m-auto animate">
                     <InputNumber min={55000} max={1000000} value={inputValue} onChange={(e)=>handleInputChange(e)} className="w-6 md:w-3" />
                     <Slider
                         value={priceRange}

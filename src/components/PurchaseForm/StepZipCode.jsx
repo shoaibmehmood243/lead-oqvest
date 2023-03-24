@@ -6,7 +6,7 @@ const StepZipCode = ({formData, setFormData, step, setStep})=> {
         <div>
             <div className='w-full md:w-11 lg:w-11 m-auto text-center'>
                 <h1 className="text-900 text-4xl mb-6">What is your Zip code ?</h1>
-                <form>
+                <form className=' animate'>
                 <div>
                     <InputMask value={formData.zipCode} mask="99999" onChange={(e)=> setFormData({...formData, zipCode: e.target.value})} type="text" className="p-inputtext-lg w-10 md:w-8 lg:w-10" placeholder="Enter your Zip Code here" />
                 </div>

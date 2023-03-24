@@ -23,7 +23,7 @@ const StepSix = ({formData, setFormData, step, setStep})=> {
         <div>
             <div className='w-11 md:w-10 lg:w-12 m-auto text-center'>
                 <h1 className="text-900 text-4xl mb-6">How will this property be used??</h1>
-                <div className="grid max-w-full m-auto lg:w-12">
+                <div className="grid max-w-full m-auto lg:w-12 animate">
                     {
                         data.map((data, index)=> (
                             <div key={index} onClick={()=> {setState(data.name); setTimeout(()=> {setStep(step + 1)}, 500); setFormData({...formData, propertyUsed: data.name})}} className='col-12 md:col-6 lg:col-4'>

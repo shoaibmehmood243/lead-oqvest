@@ -19,7 +19,7 @@ const StepFifteenRef = ({formData, setFormData, step, setStep})=> {
         <div>
             <div className='w-full md:w-full lg:w-full m-auto text-center'>
                 <h1 className="text-900 text-4xl mb-6">Do you currently have a FHA loan?</h1>
-                <div className="grid max-w-full m-auto w-full lg:w-28rem">
+                <div className="grid max-w-full m-auto w-full lg:w-28rem animate">
                     {
                         data.map((data, index)=> (
                             <div key={index} onClick={()=> {setState(data.name); setTimeout(()=> {setStep(step + 1)}, 500); setFormData({...formData, fhaLoan: data.name})}} className='col-6'>

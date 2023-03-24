@@ -32,7 +32,7 @@ const StepEighteenRef = ({formData, setFormData, step, setStep})=> {
             <div className='w-full md:w-11 m-auto text-center'>
                 <h1 className="text-900 text-4xl mb-6">What is your phone number ?</h1>
                 <form onSubmit={handleSubmit}>
-                    <div>
+                    <div className=' animate'>
                         <InputMask mask="(999) 999-9999" value={formData.number} onChange={(e)=> setFormData({...formData, number: e.target.value})} type="text" className="p-inputtext-lg w-11 md:w-10 lg:w-8" placeholder="Enter your phone number" />
                     </div>
                     <div className="mt-6 flex align-items-center justify-content-center gap-4 submit-btn">

@@ -207,7 +207,7 @@ const Home = () => {
                             <div>
                                 <div className='w-full md:w-11 lg:w-12 m-auto text-center'>
                                     <h1 className='text-900 text-4xl my-5'>What type of loan do you need??</h1>
-                                    <div className="grid w-full lg:w-26rem m-auto max-w-full">
+                                    <div className="grid w-full lg:w-26rem m-auto max-w-full animate">
                                         {
                                             data.map((data, index) => (
                                                 <div key={index} onClick={() => { setState(data.name); setTimeout(() => { setStep(step + 1) }, 100); setFormData({ ...formData, homeType: data.name }) }} className={`col-12 md:col-6`}>

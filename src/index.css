@@ -115,6 +115,20 @@ display: flex;
 .steps .p-progressbar .p-progressbar-label {
     color: #000;
 }
+.animate {
+    animation: slide-in 0.5s ease-in-out;
+}
+
+@keyframes slide-in {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 
 .thanks {
     display: flex;
@@ -159,6 +173,31 @@ display: flex;
     justify-content: center;
     align-items: center;
 }
+
+.hero-text {
+    animation: slide-in 0.5s ease-in-out;
+}
+
+@keyframes slide-in {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+@keyframes slide-out {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 
 .hero-text h1 {
     font-weight: 700;
@@ -250,6 +289,7 @@ color: #222D39;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
+    animation: slide-out 0.8s ease-in-out;
   }
   
   .grid-service > * {

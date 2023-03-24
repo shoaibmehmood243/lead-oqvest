@@ -19,7 +19,7 @@ const StepNine = ({formData, setFormData, step, setStep})=> {
         <div>
             <div className='w-12 md:w-8 lg:w-12 m-auto text-center'>
                 <h1 className="text-900 text-4xl mb-6">What kind of rate do you prefer?</h1>
-                <div className="grid max-w-full m-auto w-full lg:w-28rem">
+                <div className="grid max-w-full m-auto w-full lg:w-28rem animate">
                     {
                         data.map((data, index)=> (
                             <div key={index} onClick={()=> {setState(data.name); setTimeout(()=> {setStep(step +1)}, 500); setFormData({...formData, rateKind: data.name})}} className={`col-6`}>
