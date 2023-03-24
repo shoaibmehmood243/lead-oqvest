@@ -19,13 +19,13 @@ const StepFourteen = ({formData, setFormData, step, setStep})=> {
         <div>
             <div className='w-11 md:w-10 lg:w-10 m-auto text-center'>
                 <h1 className="text-900 text-4xl mb-6">Are you working with a real estate agent??</h1>
-                <div className="grid max-w-full m-auto w-full lg:w-28rem animate">
+                <div className="grid max-w-full m-auto w-full lg:w-27rem animate">
                     {
                         data.map((data, index)=> (
-                            <div key={index} onClick={()=> {setState(data.name); setTimeout(()=> {setStep(step + 1)}, 500); setFormData({...formData, agentAssociated: data.name})}} className='col-6'>
+                            <div key={index} onClick={()=> {setState(data.name); setTimeout(()=> {setStep(step + 1)}, 0); setFormData({...formData, agentAssociated: data.name})}} className='col-6'>
                                 <Card className={`cursor-pointer ${state === data.name ? 'active' : 'text-900'}`}>
                                     <img src={data.img} />
-                                    <h6 className='text-xs m-0 mt-2'>{data.name}</h6>
+                                    <h6 className='text-xs m-0 mt-3'>{data.name}</h6>
                                 </Card>
                             </div>
                         ))

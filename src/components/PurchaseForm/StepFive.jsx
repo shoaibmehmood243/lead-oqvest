@@ -27,10 +27,10 @@ const StepFive = ({formData, setFormData, step, setStep})=> {
         <div>
             <div className='w-10 md:w-8 lg:w-12 m-auto text-center'>
                 <h1 className="text-900 text-4xl mb-6">What is your current property purchase situation?</h1>
-                <div className="grid max-w-full m-auto lg:w-12 animate">
+                <div className="grid max-w-full m-auto lg:w-[44rem] animate">
                     {
                         data.map((data, index)=> (
-                            <div key={index} onClick={()=> {setState(data.name); setTimeout(()=> {setStep(step + 1)}, 500); setFormData({...formData, currentSituation: data.name})}} className='col-6 lg:col-3'>
+                            <div key={index} onClick={()=> {setState(data.name); setTimeout(()=> {setStep(step + 1)}, 0); setFormData({...formData, currentSituation: data.name})}} className='col-6 lg:col-3'>
                                 <Card className={`cursor-pointer ${state === data.name ? 'active' : 'text-900'}`}>
                                     <img src={data.img} />
                                     <h6 className='text-xs m-0 mt-3'>{data.name}</h6>

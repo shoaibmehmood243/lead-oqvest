@@ -30,7 +30,7 @@ const StepTwoRef = ({formData, setFormData, step, setStep})=> {
                 <div className="grid-app gap-4 max-w-full animate">
                     {
                         data.map((data, index)=> (
-                            <div key={index} onClick={()=> {setState(data.name); setTimeout(()=> {setStep(step + 1)}, 500); setFormData({...formData, creditScore: data.name})}}>
+                            <div key={index} onClick={()=> {setState(data.name); setTimeout(()=> {setStep(step + 1)}, 0); setFormData({...formData, creditScore: data.name})}}>
                                 <Card className={`cursor-pointer ${state === data.name ? 'active' : 'text-900'}`}>
                                     <img src={data.img} />
                                     <h6 className='text-xs m-0 mt-3'>{data.name}</h6>

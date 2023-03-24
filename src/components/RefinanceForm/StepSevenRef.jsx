@@ -26,7 +26,7 @@ const StepSevenRef = ({formData, setFormData, step, setStep})=> {
                 <div className="grid max-w-full m-auto w-full lg:w-full animate">
                     {
                         data.map((data, index)=> (
-                            <div key={index} onClick={()=> {setState(data.name); setTimeout(()=> {setStep(step + 1)}, 500); setFormData({...formData, propertyUsed: data.name})}} className='col-12 md:col-6 lg:col-4'>
+                            <div key={index} onClick={()=> {setState(data.name); setTimeout(()=> {setStep(step + 1)}, 0); setFormData({...formData, propertyUsed: data.name})}} className='col-12 md:col-6 lg:col-4'>
                                 <Card className={`cursor-pointer ${state === data.name ? 'active' : 'text-900'}`}>
                                     <img src={data.img} />
                                     <h6 className='text-xs m-0 mt-3'>{data.name}</h6>

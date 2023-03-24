@@ -30,7 +30,7 @@ const StepThreeRef = ({formData, setFormData, step, setStep})=> {
                 <div className="grid max-w-full m-auto w-full lg:w-full animate">
                     {
                         data.map((data, index)=> (
-                            <div className="col-6 md:col-6 lg:col-3" key={index} onClick={()=> {setState(data.name); setTimeout(()=> {setStep(step + 1)}, 500); setFormData({...formData, purchaseYear: data.name})}}>
+                            <div className="col-6 md:col-6 lg:col-3" key={index} onClick={()=> {setState(data.name); setTimeout(()=> {setStep(step + 1)}, 0); setFormData({...formData, purchaseYear: data.name})}}>
                                 <Card className={`cursor-pointer ${state === data.name ? 'active' : 'text-900'}`}>
                                     <img src={data.img} />
                                     <h6 className='text-xs m-0 mt-3'>{data.name}</h6>

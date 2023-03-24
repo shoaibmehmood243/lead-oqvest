@@ -136,7 +136,7 @@ const LandingPage = ()=> {
             </div>
         </div>
         <div className="featured">
-            <h2 className="mb-6">Featured In</h2>
+            <h2 className="mb-6 text-5xl">Featured In</h2>
             <div style={{maxWidth: '100vw'}} className="images">
                 <Carousel
                     value={images}
