@@ -1,4 +1,7 @@
+import { Button } from 'primereact/button';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import styles from '../../App.module.css';
 
 const Faqs = () => {
     const data = [
@@ -38,22 +41,27 @@ const Faqs = () => {
             {data.map((item, index) => (
                 <div
                     key={index}
-                    className={`faq-item`}
+                    className={styles.faqItem}
                 >
                     <div
                         className="flex align-items-center gap-3 cursor-pointer pt-2 pb-4"
                         onClick={() => toggleItem(index)}
                     >
-                        <span style={{ fontWeight: '600', color: '#0CBC8B' }}>{expandedItems.includes(index) ? '_' : '+'}</span>
+                        <span style={{ fontWeight: '600', color: '#0CBC8B' }}>{expandedItems.includes(index) ? '-' : '+'}</span>
                         <h3 className="m-0">{item.title}</h3>
                     </div>
                     {expandedItems.includes(index) && (
-                        <div className="item-text">
+                        <div className={styles.itemText}>
                             <p>{item.text}</p>
                         </div>
                     )}
                 </div>
             ))}
+            <div className="text-center my-8">
+                <Link style={{textDecoration: 'none'}} to="lead">
+                    <Button label="Paperless & Quick - Apply Now!" />
+                </Link>
+            </div>
         </div>
     );
 };

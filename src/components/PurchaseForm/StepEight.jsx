@@ -40,7 +40,7 @@ const StepEight = ({formData, setFormData, step, setStep})=> {
         <div>
             <div className='w-full md:w-11 lg:w-10 m-auto text-center'>
                 <h1 className="text-900 text-4xl mb-6">What is your estimate down payment?</h1>
-                <div className="w-full md:w-11 lg:w-10 m-auto">
+                <div className="w-full md:w-11 lg:w-11 m-auto">
                     <InputNumber min={3} max={200} value={inputValue} onChange={(e)=>handleInputChange(e)} className="w-6 md:w-3" />
                     <Slider
                         value={priceRange}

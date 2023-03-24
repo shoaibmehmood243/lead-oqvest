@@ -29,15 +29,15 @@ const StepTwo = ({formData, setFormData, step, setStep})=> {
     ]
     return (
         <div>
-            <div className='w-8 m-auto text-center'>
+            <div className='w-full md:w-11 lg:w-10 m-auto text-center'>
                 <h1 className="text-900 text-4xl mb-6">Great! What type of property are you purchasing?</h1>
-                <div className="grid-app max-w-full">
+                <div className="grid-app gap-5 max-w-full">
                     {
                         data.map((data, index)=> (
-                            <div key={index} onClick={()=> {setState(data.name); setTimeout(()=> {setStep(step + 1)}, 1000); setFormData({...formData, propertyType: data.name})}}>
+                            <div key={index} onClick={()=> {setState(data.name); setTimeout(()=> {setStep(step + 1)}, 500); setFormData({...formData, propertyType: data.name})}}>
                                 <Card className={`cursor-pointer ${state === data.name ? 'active' : 'text-900'}`}>
                                     <img height={46} src={data.img} />
-                                    <h6 className='text-xs m-0 mt-2'>{data.name}</h6>
+                                    <h6 className='text-xs m-0 mt-3'>{data.name}</h6>
                                 </Card>
                             </div>
                         ))

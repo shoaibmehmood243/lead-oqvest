@@ -3,6 +3,7 @@ import { Banner, Faqs, Footer, Header } from "../components/Home";
 import { Button } from 'primereact/button'
 import {Link} from 'react-router-dom';
 import { Carousel } from 'primereact/carousel';
+import styles from '../App.module.css';
 
 const LandingPage = ()=> {
     const images = [
@@ -84,14 +85,14 @@ const LandingPage = ()=> {
         <Header />
         <div className="grid max-w-full m-0 md:relative hero-section">
             <div className="col-12 md:col-6 hero-text px-4 md:px-8">
-                <h1><strong className="st-2">Invest</strong> in <strong className="st-1">Real EState</strong> with ease:</h1>
+                <h1><strong className="st-2">Invest</strong> in <strong className="st-1">Real Estate</strong> with ease:</h1>
                 <ul className="items">
                     <li><img src={hero1} /> Leverage your rental income to expand your investment portfolio</li>
                     <li><img src={hero2} /> No income or employment verification</li>
                     <li><img src={hero3} /> Borrow up to 85% of home value</li>
                     <li><img src={hero4} /> Close in LLC</li>
                 </ul>
-                <p>"Our technology offers hassle-free options to help you find the <span style={{color: '#0CBC8B'}}>best rates</span> quickly and easily."</p>
+                <p>"Our technology offers hassle-free options to help you find the <span className="txt" style={{color: '#0CBC8B'}}>best rates</span> quickly and easily."</p>
                 <Link style={{textDecoration: 'none'}} to="lead">
                     <Button label="Paperless & Quick - Apply Now!" />
                 </Link>
@@ -122,7 +123,7 @@ const LandingPage = ()=> {
                         chooseData.map((data, i)=> (
                             <div key={i} className="quick-card-2">
                                 <img width={55} height={66} src={data.img} />
-                                <h3>{data.title}</h3>
+                                <h3 className="mt-1 mb-2">{data.title}</h3>
                                 <p>{data.text}</p>
                             </div>
                         ))
@@ -153,17 +154,12 @@ const LandingPage = ()=> {
                 </Link>
             </div>
         </div>
-        <div className="faq-section my-6">
-            <div className="faqs my-6">
+        <div className={`${styles.faqSection} my-6`}>
+            <div className={`${styles.faqs} my-6`}>
                 <h2 className="mb-6">Quetions? Look here</h2>
-                <div className="f">
+                <div className={styles.f}>
                     <Faqs />
                 </div>
-            </div>
-            <div className="text-center my-8">
-                <Link style={{textDecoration: 'none'}} to="lead">
-                    <Button label="Paperless & Quick - Apply Now!" />
-                </Link>
             </div>
         </div>
         <Footer />

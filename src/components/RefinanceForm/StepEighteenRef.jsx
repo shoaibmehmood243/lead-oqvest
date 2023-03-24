@@ -29,7 +29,7 @@ const StepEighteenRef = ({formData, setFormData, step, setStep})=> {
     };
     return (
         <div>
-            <div className='w-full md:w-10 m-auto text-center'>
+            <div className='w-full md:w-11 m-auto text-center'>
                 <h1 className="text-900 text-4xl mb-6">What is your phone number ?</h1>
                 <form onSubmit={handleSubmit}>
                     <div>

@@ -27,13 +27,13 @@ const StepThree = ({formData, setFormData, step, setStep})=> {
         <div>
             <div className='w-8 m-auto text-center'>
                 <h1 className="text-900 text-4xl mb-6">Estimate your credit score:</h1>
-                <div className="grid-app max-w-full">
+                <div className="grid-app gap-5 max-w-full">
                     {
                         data.map((data, index)=> (
-                            <div key={index} onClick={()=> {setState(data.name); setTimeout(()=> {setStep(step + 1)}, 1000); setFormData({...formData, creditScore: data.name})}}>
+                            <div key={index} onClick={()=> {setState(data.name); setTimeout(()=> {setStep(step + 1)}, 500); setFormData({...formData, creditScore: data.name})}}>
                                 <Card className={`cursor-pointer ${state === data.name ? 'active' : 'text-900'}`}>
                                     <img src={data.img} />
-                                    <h6 className='text-xs m-0 mt-2'>{data.name}</h6>
+                                    <h6 className='text-xs m-0 mt-3'>{data.name}</h6>
                                 </Card>
                             </div>
                         ))

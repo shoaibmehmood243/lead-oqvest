@@ -25,15 +25,15 @@ const StepOneRef = ({formData, setFormData, step, setStep})=> {
     ]
     return (
         <div>
-            <div className='w-12 md:w-11 lg:w-11 m-auto text-center'>
+            <div className='w-12 md:w-11 lg:w-12 m-auto text-center'>
                 <h1 className="text-900 text-4xl mb-6">Great! What type of property are you refinancing?</h1>
                 <div className="grid max-w-full m-auto w-full lg:w-full">
                     {
                         data.map((data, index)=> (
-                            <div key={index} onClick={()=> {setState(data.name); setTimeout(()=> {setStep(step + 1)}, 1000); setFormData({...formData, propertyType: data.name})}} className='col-6 md:col-6 lg:col-3'>
+                            <div key={index} onClick={()=> {setState(data.name); setTimeout(()=> {setStep(step + 1)}, 500); setFormData({...formData, propertyType: data.name})}} className='col-6 md:col-6 lg:col-3'>
                                 <Card className={`cursor-pointer ${state === data.name ? 'active' : 'text-900'}`}>
-                                    <img src={data.img} />
-                                    <h6 className='text-xs m-0 mt-2'>{data.name}</h6>
+                                    <img height={50} src={data.img} />
+                                    <h6 className='text-xs m-0 mt-3'>{data.name}</h6>
                                 </Card>
                             </div>
                         ))
