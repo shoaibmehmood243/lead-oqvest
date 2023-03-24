@@ -4,7 +4,7 @@ import { logo } from '../../assets';
 const Navbar = ()=> {
     return (
         <div>
-            <div className='w-6rem h-6rem py-3 px-6'>
+            <div className='w-6rem h-1rem py-3 px-6'>
                 <Link to={'/'}>
                     <img src={logo} />
                 </Link>

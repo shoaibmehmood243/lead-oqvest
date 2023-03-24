@@ -7,6 +7,10 @@
     overflow-x: hidden;
 }
 
+body .uwy .uai {
+    left: calc(100vw - 80px) !important;
+    top: calc(80% - 0px) !important;
+}
 .p-component {
     font-family: 'Poppins' !important;
 }
