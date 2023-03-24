@@ -210,7 +210,7 @@ const Home = () => {
                                     <div className="grid w-full lg:w-26rem m-auto max-w-full">
                                         {
                                             data.map((data, index) => (
-                                                <div key={index} onClick={() => { setState(data.name); setTimeout(() => { setStep(step + 1) }, 1000); setFormData({ ...formData, homeType: data.name }) }} className={`col-12 md:col-6`}>
+                                                <div key={index} onClick={() => { setState(data.name); setTimeout(() => { setStep(step + 1) }, 100); setFormData({ ...formData, homeType: data.name }) }} className={`col-12 md:col-6`}>
                                                     <Card className={`cursor-pointer py-3 ${state === data.name ? 'active' : 'text-900'}`}>
                                                         <img src={data.img} />
                                                         <p className='text-base font-semibold m-0 mt-3'>Home {data.name}</p>

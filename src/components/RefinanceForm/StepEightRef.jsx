@@ -25,7 +25,7 @@ const StepEightRef = ({formData, setFormData, step, setStep})=> {
                             <div key={index} onClick={()=> {setState(data.name); setTimeout(()=> {setStep(step +1)}, 500); setFormData({...formData, rateKind: data.name})}} className={`col-6`}>
                                 <Card className={`cursor-pointer py-3 ${state === data.name ? 'active' : 'text-900'}`}>
                                     <img src={data.img} />
-                                    <p className='text-base font-semibold m-0 mt-3'>{data.name}</p>
+                                    <h6 className='text-xs font-semibold m-0 mt-3'>{data.name}</h6>
                                 </Card>
                             </div>
                         ))

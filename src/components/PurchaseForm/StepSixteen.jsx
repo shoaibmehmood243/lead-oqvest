@@ -20,7 +20,9 @@
   };
 
   useEffect(() => {
-    validateEmail(formData.email); // Call validateEmail whenever the email value changes
+    if(formData.email?.length > 0) {
+      validateEmail(formData.email); // Call validateEmail whenever the email value changes
+    }
   }, [formData.email]);
       return (
           <div>

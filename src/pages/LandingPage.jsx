@@ -11,6 +11,10 @@ const LandingPage = ()=> {
         {src: forbes},
         {src: inc},
         {src: msn},
+        {src: yahoo},
+        {src: forbes},
+        {src: inc},
+        {src: msn},
     ]
     const quickData = [
         {
