@@ -23,9 +23,9 @@ const StepEight = ({formData, setFormData, step, setStep})=> {
         setInputValue(value);
         if (Number(value)) {
             const price = parseInt(value);
-            if(price > 200) {
-                setPriceRange(200);
-                setFormData({...formData, downPayment: 200})
+            if(price > 20) {
+                setPriceRange(20);
+                setFormData({...formData, downPayment: 20})
             } else if(price === 3) {
                 setPriceRange(3);
                 setFormData({...formData, downPayment: 3})
@@ -40,16 +40,23 @@ const StepEight = ({formData, setFormData, step, setStep})=> {
         <div>
             <div className='w-full md:w-11 lg:w-10 m-auto text-center'>
                 <h1 className="text-900 text-4xl mb-6">What is your estimate down payment?</h1>
-                <div className="w-full md:w-11 lg:w-11 m-auto animate">
-                    <InputNumber min={3} max={200} value={inputValue} onChange={(e)=>handleInputChange(e)} className="w-6 md:w-3 flex justify-content-center align-items-center m-auto" />
+                <div className="w-11 md:w-11 lg:w-11 m-auto animate">
+                    <div className="w-9 md:w-8 flex justify-content-center align-items-center m-auto slides-main">
+                        <div className="slider-labels">%</div>
+                        <InputNumber min={3} max={20} value={inputValue} onChange={(e)=>handleInputChange(e)} />
+                    </div>
                     <Slider
                         value={priceRange}
                         step={1}
                         min={3}
-                        max={200}
+                        max={20}
                         onChange={handleSlide}
                         className='mt-4'
                     />
+                     <div className="flex align-items-center justify-content-between mt-3 ranges">
+                        <span>3%</span>
+                        <span>20%+</span>
+                    </div>
                 </div>
                 <div className="mt-6 flex align-items-center justify-content-center gap-4">
                     <Button onClick={()=> setStep(step-1)} label="Back" className="px-6" outlined />

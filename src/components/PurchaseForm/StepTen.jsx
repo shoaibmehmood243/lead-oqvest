@@ -39,16 +39,23 @@ const StepTen = ({formData, setFormData, step, setStep})=> {
         <div>
             <div className='w-full md:w-11 lg:w-10 m-auto text-center'>
                 <h1 className="text-900 text-4xl mb-6">What is your gross annual household income?</h1>
-                <div className="w-full md:w-11 lg:w-11 m-auto animate">
-                    <InputNumber min={55000} max={1000000} value={inputValue} onChange={(e)=>handleInputChange(e)} className="w-6 md:w-2 flex justify-content-center align-items-center m-auto" />
+                <div className="w-11 md:w-11 lg:w-11 m-auto animate">
+                    <div className="w-9 md:w-8 flex justify-content-center align-items-center m-auto slides-main">
+                        <div className="slider-labels">$</div>
+                    <InputNumber min={0} max={1000000} value={inputValue} onChange={(e)=>handleInputChange(e)} />
+                    </div>
                     <Slider
                         value={priceRange}
                         step={50}
-                        min={55000}
+                        min={0}
                         max={1000000}
                         onChange={handleSlide}
                         className='mt-4'
                     />
+                     <div className="flex align-items-center justify-content-between mt-3 ranges">
+                        <span>$0</span>
+                        <span>$1M+</span>
+                    </div>
                 </div>
                 <div className="mt-6 flex align-items-center justify-content-center gap-4">
                     <Button onClick={()=> setStep(step-1)} label="Back" className="px-6" outlined />

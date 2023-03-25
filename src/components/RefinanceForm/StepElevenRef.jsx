@@ -29,7 +29,7 @@ const StepElevenRef = ({formData, setFormData, step, setStep})=> {
     ]
     return (
         <div>
-            <div className='w-8 m-auto text-center'>
+            <div className='w-11 md:w-8 m-auto text-center'>
                 <h1 className="text-900 text-4xl mb-6">What is your employment status?</h1>
                 <div className="grid-app gap-4 max-w-full animate">
                     {
@@ -37,7 +37,7 @@ const StepElevenRef = ({formData, setFormData, step, setStep})=> {
                             <div key={index} onClick={()=> {setState(data.name); setTimeout(()=> {setStep(step + 1)}, 0); setFormData({...formData, employementStatus: data.name})}}>
                                 <Card className={`cursor-pointer ${state === data.name ? 'active' : 'text-900'}`}>
                                     <img src={data.img} />
-                                    <h6 className='text-xs m-0 mt-3'>{data.name}</h6>
+                                    <p className='text-sm font-600 m-0 mt-3'>{data.name}</p>
                                 </Card>
                             </div>
                         ))

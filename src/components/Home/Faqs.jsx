@@ -44,7 +44,7 @@ const Faqs = () => {
                     className={styles.faqItem}
                 >
                     <div
-                        className="flex align-items-center gap-3 cursor-pointer pt-2 pb-4"
+                        className={`${styles.ic} flex align-items-center gap-3 cursor-pointer pt-2 pb-4`}
                         onClick={() => toggleItem(index)}
                     >
                         <span style={{ fontWeight: '600', color: '#0CBC8B' }}>{expandedItems.includes(index) ? '-' : '+'}</span>

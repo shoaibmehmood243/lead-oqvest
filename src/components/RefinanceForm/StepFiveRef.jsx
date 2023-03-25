@@ -39,8 +39,11 @@ const StepFiveRef = ({formData, setFormData, step, setStep})=> {
         <div>
             <div className='w-full md:w-11 lg:w-11 m-auto text-center'>
                 <h1 className="text-900 text-4xl mb-6">What is the remaining 1st mortgage balance?</h1>
-                <div className="w-full md:w-11 lg:w-11 m-auto animate">
-                    <InputNumber min={25} max={50} value={inputValue} onChange={(e)=>handleInputChange(e)} className="w-6 md:w-4 flex justify-content-center align-items-center m-auto" />
+                <div className="w-11 md:w-11 lg:w-11 m-auto animate">
+                    <div className="w-9 md:w-8 flex justify-content-center align-items-center m-auto slides-main">
+                        <div className="slider-labels">%</div>
+                        <InputNumber min={25} max={50} value={inputValue} onChange={(e)=>handleInputChange(e)} />
+                    </div>
                     <Slider
                         value={priceRange}
                         step={1}
@@ -49,6 +52,10 @@ const StepFiveRef = ({formData, setFormData, step, setStep})=> {
                         onChange={handleSlide}
                         className='mt-4'
                     />
+                     <div className="flex align-items-center justify-content-between mt-3 ranges">
+                        <span>25%</span>
+                        <span>50%</span>
+                    </div>
                 </div>
                 <div className="mt-6 flex align-items-center justify-content-center gap-4">
                     <Button onClick={()=> setStep(step-1)} label="Back" className="px-6" outlined />

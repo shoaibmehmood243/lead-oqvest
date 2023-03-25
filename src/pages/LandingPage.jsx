@@ -88,7 +88,7 @@ const LandingPage = ()=> {
         <Banner />
         <Header />
         <div className="grid max-w-full m-0 md:relative hero-section">
-            <div className="col-12 md:col-6 hero-text px-4 md:px-8">
+            <div className="col-12 md:col-6 hero-text px-4 md:px-8 relative">
                 <h1><strong className="st-2">Invest</strong> in <strong className="st-1">Real Estate</strong> with ease:</h1>
                 <ul className="items">
                     <li><img src={hero1} /> Leverage your rental income to expand your investment portfolio</li>

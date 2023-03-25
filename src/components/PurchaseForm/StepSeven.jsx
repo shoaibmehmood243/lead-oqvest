@@ -39,9 +39,9 @@ const StepSeven = ({formData, setFormData, step, setStep})=> {
         <div>
             <div className='w-full md:w-11 lg:w-10 m-auto text-center'>
                 <h1 className="text-900 text-4xl mb-6">What is the Purchase price of new property?</h1>
-                <div className="w-full md:w-8 lg:w-11 m-auto animate">
-                    <div className="w-6 md:w-3 flex justify-content-center align-items-center m-auto">
-                        <span>$</span>
+                <div className="w-11 md:w-11 lg:w-11 m-auto animate">
+                    <div className="w-9 md:w-8 flex justify-content-center align-items-center m-auto slides-main">
+                        <div className="slider-labels">$</div>
                         <InputNumber min={55000} max={1000000} value={inputValue} onChange={(e)=>handleInputChange(e)} />
                     </div>
                     <Slider
@@ -52,6 +52,10 @@ const StepSeven = ({formData, setFormData, step, setStep})=> {
                         onChange={handleSlide}
                         className='mt-4'
                     />
+                    <div className="flex align-items-center justify-content-between mt-3 ranges">
+                        <span>$55k</span>
+                        <span>$1M+</span>
+                    </div>
                 </div>
                 <div className="mt-6 flex align-items-center justify-content-center gap-4">
                     <Button onClick={()=> setStep(step-1)} label="Back" className="px-6" outlined />

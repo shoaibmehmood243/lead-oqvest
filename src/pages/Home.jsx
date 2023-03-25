@@ -2,7 +2,7 @@ import { Card } from "primereact/card";
 import { useState } from "react";
 import { Navbar } from '../components/common'
 import { ProgressBar } from 'primereact/progressbar'
-import { homeOutline, refinance } from "../assets";
+import { homeOutline, rectangle1, rectangle2, refinance } from "../assets";
 import StepEight from "../components/PurchaseForm/StepEight";
 import StepEleven from "../components/PurchaseForm/StepEleven";
 import StepFifteen from "../components/PurchaseForm/StepFifteen";
@@ -176,11 +176,17 @@ const Home = () => {
             img: refinance
         } 
     ]
-    return (<div className="bg-blue-50">
+    return (<div className="bg-blue-50 step-main">
         <Navbar />
+        <div className="rectangle1">
+            <img src={rectangle1} />
+        </div>
+        <div className="rectangle2">
+            <img src={rectangle2} />
+        </div>
         <div className="steps">
             <div>
-                <p className="text-center text-lg">Step {step} of 18. You're {
+                <p className="text-center steps-text m-0 mb-2">Step {step} of 18. You're {
                     step === 1 ? 0 :
                         step === 2 ? 5 :
                             step === 3 ? 12 :
@@ -230,7 +236,7 @@ const Home = () => {
                                                 <div key={index} onClick={() => { setState(data.name); setTimeout(() => { setStep(step + 1) },0); setFormData({ ...formData, homeType: data.name }) }} className={`col-12 md:col-6`}>
                                                     <Card className={`cursor-pointer py-3 ${state === data.name ? 'active' : 'text-900'}`}>
                                                         <img src={data.img} />
-                                                        <p className='text-base font-normal m-0 mt-3'>Home {data.name}</p>
+                                                        <p className='text-sm font-600 m-0 mt-3'>Home {data.name}</p>
                                                     </Card>
                                                 </div>
                                             ))

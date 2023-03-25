@@ -37,7 +37,7 @@ const StepEleven = ({formData, setFormData, step, setStep})=> {
                             <div key={index} onClick={()=> {setState(data.name); setTimeout(()=> {setStep(step + 1)}, 0); setFormData({...formData, employementStatus: data.name})}}>
                                 <Card className={`cursor-pointer ${state === data.name ? 'active' : 'text-900'}`}>
                                     <img src={data.img} />
-                                    <h6 className='text-xs m-0 mt-2'>{data.name}</h6>
+                                    <p className='text-sm font-600 m-0 mt-2'>{data.name}</p>
                                 </Card>
                             </div>
                         ))

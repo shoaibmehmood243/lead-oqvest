@@ -55,6 +55,8 @@ import hero1 from './hero1.svg'
 import hero2 from './hero2.svg'
 import hero3 from './hero3.svg'
 import hero4 from './hero4.svg'
+import rectangle1 from './rectangle-1.png'
+import rectangle2 from './rectangle-2.png'
 
 export {
     logo,
@@ -113,5 +115,7 @@ export {
     hero1,
     hero2,
     hero3,
-    hero4
+    hero4,
+    rectangle1,
+    rectangle2
 }
