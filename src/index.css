@@ -522,12 +522,13 @@ footer a {
 
 @media screen and (max-width: 992px) {
     .step-main {
-        height: 100vh;
-        min-height: 800px;
+        height: 100%;
     }
     .steps {
         position: relative;
         top: 100px;
+        height: 100%;
+        background-color: #f5f9ff;
     }
     .rectangle1 {
         display: none;

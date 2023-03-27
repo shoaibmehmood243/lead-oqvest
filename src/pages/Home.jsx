@@ -186,7 +186,7 @@ const Home = () => {
         </div>
         <div className="steps">
             <div>
-                <p className="text-center steps-text m-0 mb-2">Step {step} of 18. You're {
+                <p className="text-center steps-text m-0 mb-2">Step {step} of {formData.homeType === "Purchase" ? 18 : 20}. You're {
                     step === 1 ? 0 :
                         step === 2 ? 5 :
                             step === 3 ? 12 :
@@ -203,7 +203,9 @@ const Home = () => {
                                                                         step === 14 ? 76 :
                                                                             step === 15 ? 82 :
                                                                                 step === 16 ? 88 :
-                                                                                    step === 17 ? 94 : 100
+                                                                                    step === 17 ? 94 :
+                                                                                    step === 19 ? 95 :
+                                                                                    step === 20 ? 87 : 100
                 } done.</p>
                 <ProgressBar value={
                     step === 1 ? 0 :
