@@ -200,7 +200,24 @@ color: #222D39;
 }
 
 .thanks p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
     color: #404F66;
+}
+
+.thanks h6 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+    color: #404F66;
+}
+
+.thank .p-button-label {
+    font-weight: 500 !important;
+font-size: 16px !important;
 }
 
 .banner a {
@@ -571,6 +588,9 @@ footer a {
     .quick-card-2 {
         padding: 25px 15px;
     }
+    .thanks h1 {
+        font-size: 70.667px;
+    }
 }
 
 @media screen and (max-width: 575px) {
@@ -623,6 +643,9 @@ footer a {
     }
     .footer-inner p {
         padding-right: 0;
+    }
+    .thanks h1 {
+        font-size: 60.667px;
     }
 }
 
