@@ -225,6 +225,12 @@ font-size: 16px !important;
     text-decoration: none;
 }
 
+.header {
+    position: sticky;
+    z-index: 1;
+    top: 0;
+}
+
 .header div {
     background: rgba(203, 223, 254, 0.1);
     backdrop-filter: blur(20px);
