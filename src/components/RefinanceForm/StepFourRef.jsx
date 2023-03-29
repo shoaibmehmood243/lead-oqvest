@@ -39,9 +39,9 @@ const StepFourRef = ({formData, setFormData, step, setStep})=> {
     return (
         <div>
             <div className='w-full md:w-11 lg:w-11 m-auto text-center'>
-                <h1 className="text-900 text-4xl mb-6">Please estimate the value of the property.</h1>
+                <h1 className="text-900 text-2xl md:text-4xl mb-6">Please estimate the value of the property.</h1>
                 <div className="w-11 md:w-11 lg:w-11 m-auto animate">
-                    <div className="w-9 md:w-8 flex justify-content-center align-items-center m-auto slides-main">
+                    <div className="w-11 md:w-8 flex justify-content-center align-items-center m-auto slides-main">
                         <div className="slider-labels">$</div>
                         <InputNumber min={200000} max={2000000} value={inputValue} onChange={(e)=>handleInputChange(e)} />
                     </div>

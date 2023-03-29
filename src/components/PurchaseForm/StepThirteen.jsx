@@ -18,7 +18,7 @@ const StepThirteen = ({formData, setFormData, step, setStep})=> {
     return (
         <div>
             <div className='w-full md:w-12 lg:w-12 m-auto text-center'>
-                <h1 className="text-900 text-4xl mb-6">Can you show proof of income??</h1>
+                <h1 className="text-900 text-2xl md:text-4xl mb-6">Can you show proof of income??</h1>
                 <div className="grid max-w-full m-auto w-full lg:w-27rem animate">
                     {
                         data.map((data, index)=> (

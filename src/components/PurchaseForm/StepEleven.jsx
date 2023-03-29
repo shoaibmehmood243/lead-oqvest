@@ -30,7 +30,7 @@ const StepEleven = ({formData, setFormData, step, setStep})=> {
     return (
         <div>
             <div className='w-full md:w-8 m-auto text-center'>
-                <h1 className="text-900 text-4xl mb-6">What is your employment status?</h1>
+                <h1 className="text-900 text-2xl md:text-4xl mb-6">What is your employment status?</h1>
                 <div className="grid-app gap-4 max-w-full animate">
                     {
                         data.map((data, index)=> (

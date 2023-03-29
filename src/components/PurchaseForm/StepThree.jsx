@@ -25,8 +25,8 @@ const StepThree = ({formData, setFormData, step, setStep})=> {
     ]
     return (
         <div>
-            <div className='w-8 m-auto text-center'>
-                <h1 className="text-900 text-4xl mb-6">Estimate your credit score:</h1>
+            <div className='w-full md:w-8 m-auto text-center'>
+                <h1 className="text-900 text-2xl md:text-4xl mb-6">Estimate your credit score:</h1>
                 <div className="grid-app gap-5 max-w-full animate">
                     {
                         data.map((data, index)=> (

@@ -189,25 +189,25 @@ const Home = () => {
                 {
                     formData.homeType !== '' && (<>
                         <p className="text-center steps-text m-0 mb-2">Step {step} of {formData.homeType === "Purchase" ? 18 : 20}. You're {
-                                step === 1 ? 5 :
-                                    step === 2 ? 12 :
-                                        step === 3 ? 18 :
-                                            step === 4 ? 24 :
-                                                step === 5 ? 29 :
-                                                    step === 6 ? 35 :
-                                                        step === 7 ? 41 :
-                                                            step === 8 ? 47 :
-                                                                step === 9 ? 53 :
-                                                                    step === 10 ? 59 :
-                                                                        step === 11 ? 65 :
-                                                                            step === 12 ? 71 :
-                                                                                step === 13 ? 76 :
-                                                                                    step === 14 ? 82 :
-                                                                                        step === 15 ? 88 :
-                                                                                            step === 16 ? 94 :
-                                                                                            step === 17 ? 95 :
-                                                                                            step === 20 ? 87 : 100
-                        } done.</p>
+                                step === 1 ? 0 :
+                                    step === 2 ? 5 :
+                                        step === 3 ? 12 :
+                                            step === 4 ? 18 :
+                                                step === 5 ? 24 :
+                                                    step === 6 ? 29 :
+                                                        step === 7 ? 35 :
+                                                            step === 8 ? 41 :
+                                                                step === 9 ? 47 :
+                                                                    step === 10 ? 53 :
+                                                                        step === 11 ? 59 :
+                                                                            step === 12 ? 65 :
+                                                                                step === 13 ? 71 :
+                                                                                    step === 14 ? 76 :
+                                                                                        step === 15 ? 82 :
+                                                                                            step === 16 ? 88 :
+                                                                                            step === 17 ? 94 :
+                                                                                            step === 20 ? 100 : 100
+                        }% done.</p>
                         <ProgressBar value={
                             step === 1 ? 0 :
                                 step === 2 ? 5 :
@@ -234,7 +234,7 @@ const Home = () => {
                         formData.homeType === '' ? (
                             <div>
                                 <div className='w-full md:w-11 lg:w-12 m-auto text-center'>
-                                    <h1 className='text-900 text-4xl my-5'>What type of loan do you need??</h1>
+                                    <h1 className='text-900 text-2xl md:text-4xl my-5'>What type of loan do you need??</h1>
                                     <div className="grid w-full lg:w-27rem m-auto max-w-full animate">
                                         {
                                             data.map((data, index) => (

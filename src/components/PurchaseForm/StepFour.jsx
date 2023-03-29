@@ -18,7 +18,7 @@ const StepFour = ({formData, setFormData, step, setStep})=> {
     return (
         <div>
             <div className='w-full md:w-11 lg:w-12 m-auto text-center'>
-                <h1 className="text-900 text-4xl mb-6">Is this your first property purchase??</h1>
+                <h1 className="text-900 text-2xl md:text-4xl mb-6">Is this your first property purchase??</h1>
                 <div className="grid max-w-full w-full m-auto lg:w-27rem animate">
                     {
                         data.map((data, index)=> (

@@ -30,7 +30,7 @@ const StepTwo = ({formData, setFormData, step, setStep})=> {
     return (
         <div>
             <div className='w-full md:w-11 lg:w-10 m-auto text-center'>
-                <h1 className="text-900 text-4xl mb-6">Great! What type of property are you purchasing?</h1>
+                <h1 className="text-900 text-2xl md:text-4xl mb-6">Great! What type of property are you purchasing?</h1>
                 <div className="grid-app gap-5 max-w-full animate">
                     {
                         data.map((data, index)=> (

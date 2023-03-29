@@ -22,7 +22,7 @@ const StepSix = ({formData, setFormData, step, setStep})=> {
     return (
         <div>
             <div className='w-11 md:w-10 lg:w-12 m-auto text-center'>
-                <h1 className="text-900 text-4xl mb-6">How will this property be used??</h1>
+                <h1 className="text-900 text-2xl md:text-4xl mb-6">How will this property be used??</h1>
                 <div className="grid max-w-full m-auto lg:w-12 animate">
                     {
                         data.map((data, index)=> (

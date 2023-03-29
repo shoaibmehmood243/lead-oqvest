@@ -25,8 +25,8 @@ const StepFive = ({formData, setFormData, step, setStep})=> {
     ]
     return (
         <div>
-            <div className='w-10 md:w-8 lg:w-12 m-auto text-center'>
-                <h1 className="text-900 text-4xl mb-6">What is your current property purchase situation?</h1>
+            <div className='w-11 md:w-8 lg:w-12 m-auto text-center'>
+                <h1 className="text-900 text-2xl md:text-4xl mb-6">What is your current property purchase situation?</h1>
                 <div className="grid max-w-full m-auto lg:w-[44rem] animate">
                     {
                         data.map((data, index)=> (

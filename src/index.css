@@ -608,7 +608,7 @@ footer a {
         grid-template-columns: repeat(1, 1fr);
     }
     .faqs {
-        width: 80%;
+        width: 90%;
     }
     .featured .images {
         grid-template-columns: repeat(2, 1fr);
@@ -635,6 +635,29 @@ footer a {
     .steps .p-progressbar {
         width: 80%;
     }
+    .hero-text .items li {
+        font-size: 12px;
+    }
+    
+    .hero-text p, .txt {
+        font-size: 16px !important;
+    }
+    .hero-section .p-button, .featured .p-button {
+        font-size: 14px !important;
+        padding: 0.75rem 1rem !important;
+    }
+    .service, .featured {
+        width: 90%;
+    }
+    .service h2 {
+        font-size: 28px;
+    }
+    .steps-text {
+        font-size: 18px;
+    }
+    .hero-text span, .featured span {
+        font-size: 14px;
+    }
     .map iframe {
         max-width: 280px;
     }
@@ -652,6 +675,15 @@ footer a {
     }
     .thanks h1 {
         font-size: 60.667px;
+    }
+    .steps .p-button {
+        padding: 0.75rem 1.8rem !important;
+    }
+    .steps .slider-labels {
+        width: 25%;
+    }
+    .slides-main input {
+        width: 75%;
     }
 }
 
