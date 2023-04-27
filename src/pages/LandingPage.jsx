@@ -107,7 +107,7 @@ const LandingPage = ()=> {
         </div>
         <div className="service">
             <div className="quick">
-                <h2 className="mb-6">It’s as quick as...</h2>
+                <h2 className="mb-6">It’s as <strong className="st-2">quick</strong> as...</h2>
                 <div className="grid-service">
                     {
                         quickData.map((data, i)=> (
@@ -121,7 +121,7 @@ const LandingPage = ()=> {
                 </div>
             </div>
             <div className="choose mt-4 mb-8">
-                <h2 className="mb-6 mt-8">Why Choose Us???</h2>
+                <h2 className="mb-6 mt-8"><strong className="st-1">Your Mortgage</strong>, <strong className="st-2">Your Choice</strong>: Choose Oqvest</h2>
                 <div className="grid-service">
                     {
                         chooseData.map((data, i)=> (
