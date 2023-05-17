@@ -22,12 +22,12 @@ const StepSixRef = ({formData, setFormData, step, setStep})=> {
         setInputValue(value);
         if (Number(value)) {
             const price = parseInt(value);
-            if(price > 1000000) {
-                setPriceRange(1000000);
-                setFormData({...formData, mortageInterestRate: 1000000})
-            } else if(price === 55000) {
-                setPriceRange(55000);
-                setFormData({...formData, mortageInterestRate: 55000})
+            if(price > 50) {
+                setPriceRange(50);
+                setFormData({...formData, mortageInterestRate: 50})
+            } else if(price === 25) {
+                setPriceRange(25);
+                setFormData({...formData, mortageInterestRate: 25})
             } else {
                 setPriceRange(price);
                 setFormData({...formData, mortageInterestRate: price})
@@ -42,19 +42,19 @@ const StepSixRef = ({formData, setFormData, step, setStep})=> {
                 <div className="w-11 md:w-11 lg:w-11 m-auto animate">
                     <div className="w-11 md:w-8 flex justify-content-center align-items-center m-auto slides-main">
                         <div className="slider-labels">$</div>
-                        <InputNumber min={55000} max={1000000} value={inputValue} onChange={(e)=>handleInputChange(e)} />
+                        <InputNumber min={25} max={50} value={inputValue} onChange={(e)=>handleInputChange(e)} />
                     </div>
                     <Slider
                         value={priceRange}
-                        step={50}
-                        min={55000}
-                        max={1000000}
+                        step={1}
+                        min={25}
+                        max={50}
                         onChange={handleSlide}
                         className='mt-4'
                     />
                      <div className="flex align-items-center justify-content-between mt-3 ranges">
-                        <span>$55k</span>
-                        <span>$1M+</span>
+                        <span>25%</span>
+                        <span>50%</span>
                     </div>
                 </div>
                 <div className="mt-6 flex align-items-center justify-content-center gap-4">
