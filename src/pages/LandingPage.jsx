@@ -1,4 +1,4 @@
-import { closing, complete, forbes, guarantee, hero1, hero2, hero3, hero4, HeroImage, hidden, inc, invest, messageText, msn, privacy, service, yahoo } from "../assets";
+import { closing, complete, forbes, guarantee, hero1, hero2, hero3, hero4, hero5, hero6, hero7, hero8, HeroImage, hidden, inc, invest, messageText, msn, privacy, service, yahoo } from "../assets";
 import { Banner, Faqs, Footer, Header } from "../components/Home";
 import { Button } from 'primereact/button'
 import {Link} from 'react-router-dom';
@@ -88,15 +88,15 @@ const LandingPage = ()=> {
         <Banner />
         <Header />
         <div className="grid max-w-full m-0 md:relative hero-section">
-            <div className="col-12 md:col-6 hero-text px-4 md:px-8 relative">
-                <h1><strong className="st-2">Invest</strong> in <strong className="st-1">Real Estate</strong> with ease:</h1>
+            <div className="col-12 md:col-6 hero-text px-4 md:pl-8 md:pr-0 relative">
+                <h1><strong className="st-1">Skip</strong> the <strong className="st-2">tedious mortgage</strong> process, See Oqvest difference:</h1>
                 <ul className="items">
-                    <li><img src={hero1} /> Leverage your rental income to expand your investment portfolio</li>
-                    <li><img src={hero2} /> No income or employment verification</li>
-                    <li><img src={hero3} /> Borrow up to 85% of home value</li>
-                    <li><img src={hero4} /> Close in LLC</li>
+                    <li><img src={hero5} /> Our low rates helps you maximize your budget</li>
+                    <li><img src={hero6} /> Bid with confidence & Negotiate like a pro</li>
+                    <li><img src={hero7} /> Quick & Easy! Get Started now</li>
+                    <li><img src={hero8} /> Choose from our multiple loan programs to fit your specific needs.</li>
                 </ul>
-                <p>"Our technology offers hassle-free options to help you find the <span className="txt" style={{color: '#0CBC8B'}}>best rates</span> quickly and easily."</p>
+                <p>"Our <span className="txt" style={{color: '#0CBC8B'}}>technology</span> sorts through limitless options from multiple lenders, ensuring the <span className="txt" style={{color: '#FF6C59'}}>lowest rate</span> and 100% approval rate."</p>
                 <Link style={{textDecoration: 'none'}} to="lead">
                     <Button label="Paperless & Quick - Apply Now!" />
                 </Link>
