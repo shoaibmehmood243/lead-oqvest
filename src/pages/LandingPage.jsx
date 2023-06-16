@@ -89,7 +89,8 @@ const LandingPage = ()=> {
         <Header />
         <div className="grid max-w-full m-0 md:relative hero-section">
             <div className="col-12 md:col-6 hero-text px-4 md:pl-8 md:pr-0 relative">
-                <h1><strong className="st-1">Skip</strong> the <strong className="st-2">tedious mortgage</strong> process, See Oqvest difference:</h1>
+                <h1><strong className="st-2">Ignite</strong> your homeownership dreams with <strong className="st-1">Oqvest</strong></h1>
+                {/* <h1><strong className="st-1">Skip</strong> the <strong className="st-2">tedious mortgage</strong> process, See Oqvest difference:</h1> */}
                 <ul className="items">
                     <li><img src={hero5} /> Our low rates helps you maximize your budget</li>
                     <li><img src={hero6} /> Bid with confidence & Negotiate like a pro</li>
