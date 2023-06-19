@@ -68,7 +68,8 @@ const Home = () => {
         zipCode: '',
         name: '',
         email: '',
-        number: ''
+        number: '',
+        isBankkrupt: ''
     });
 
     const handleChange = (event) => {

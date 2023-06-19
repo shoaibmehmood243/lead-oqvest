@@ -4,7 +4,7 @@ import { Card } from 'primereact/card'
 import {Button} from 'primereact/button'
 
 const StepTwelve = ({formData, setFormData, step, setStep})=> {
-    const [state, setState] = useState(formData.isFirstPurcase)
+    const [state, setState] = useState(formData.isBankkrupt)
     const data = [
         {
             name: 'Yes',
@@ -22,7 +22,7 @@ const StepTwelve = ({formData, setFormData, step, setStep})=> {
                 <div className="grid max-w-full m-auto w-full lg:w-27rem animate">
                     {
                         data.map((data, index)=> (
-                            <div key={index} onClick={()=> {setState(data.name); setTimeout(()=> {setStep(step + 1)}, 0); setFormData({...formData, isFirstPurcase: data.name})}} className='col-12 md:col-6'>
+                            <div key={index} onClick={()=> {setState(data.name); setTimeout(()=> {setStep(step + 1)}, 0); setFormData({...formData, isBankkrupt: data.name})}} className='col-12 md:col-6'>
                                 <Card className={`cursor-pointer ${state === data.name ? 'active' : 'text-900'}`}>
                                     <img src={data.img} />
                                     <p className='text-sm font-600 m-0 mt-3'>{data.name}</p>
