@@ -1,4 +1,4 @@
-function initializeFacebookPixel() {
+export function initializeFacebookPixel() {
   !function(f, b, e, v, n, t, s) {
     if (f.fbq) return;
     n = f.fbq = function() {
@@ -19,5 +19,3 @@ function initializeFacebookPixel() {
   window.fbq('init', '1896215264090558');
   window.fbq('track', 'PageView');
 }
-
-initializeFacebookPixel();

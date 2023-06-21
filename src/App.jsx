@@ -2,8 +2,11 @@ import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Home, LandingPage, Thanks } from './pages';
 import userway from './userway';
+import { initializeFacebookPixel } from './meta';
+
 function App() {
   useEffect(()=> {
+    initializeFacebookPixel();
     userway?.start()
     setTimeout(() => {
       const iconElement = document.querySelector('#userwayAccessibilityIcon');
