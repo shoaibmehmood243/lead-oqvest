@@ -14,7 +14,7 @@ const StepEighteenRef = ({formData, setFormData, step, setStep})=> {
         event.preventDefault();
         try {
             setIsClicked(true)
-            const res = await axios.post(URL + '/form/refinance', {formData});
+            const res = await axios.post(URL + '/api/form/refinance', {formData});
             setIsClicked(false);
             if(res.data) {
                 setTimeout(()=> {

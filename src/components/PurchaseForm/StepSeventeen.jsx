@@ -14,7 +14,7 @@ const StepSeventeen = ({formData, setFormData, step, setStep})=> {
         event.preventDefault();
         try {
             setIsClicked(true)
-            const res = await axios.post(URL + '/form/purchase', {formData});
+            const res = await axios.post(URL + '/api/form/purchase', {formData});
             setIsClicked(false);
             if(res.data) {
                 setTimeout(()=> {
