@@ -14,8 +14,30 @@ const StepEighteenRef = ({formData, setFormData, step, setStep})=> {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            setIsClicked(true)
-            const res = await axios.post(URL + '/api/form/refinance', {formData});
+            setIsClicked(true);
+            const data = {
+                full_name: formData.name?.toString(),
+                email: formData.email?.toString(),
+                phone: formData.number?.toString(),
+                transaction: formData.homeType?.toString(),
+                property_type: formData.propertyType?.toString(),
+                credit_score: formData.creditScore?.toString(),
+                property_usage: formData.propertyUsed?.toString(),
+                home_value: formData.purchasePrice?.toString(),
+                rate_type: formData.rateKind?.toString(),
+                total_annual_income: formData.householdIncome?.toString(),
+                employement_status: formData.employementStatus?.toString(),
+                bankruptcy: formData.isBankkrupt?.toString(),
+                income_proof: formData.incomeProof?.toString(),
+                zipCode: formData.zipCode?.toString(),
+                mortgage: formData.remainingMortage.toString(),
+                interest_rate: formData.mortageInterestRate.toString(),
+                second_mortgage: formData.isSecondMortage.toString(),
+                add_cash: formData.additionalCash.toString(),
+                fha_loan: formData.fhaLoan.toString(),
+                purchasing_year: formData.purchaseYear.toString()
+            }
+            const res = await axios.post(URL + '/api/v1/submit/refinance', {...data});
             setIsClicked(false);
             if(res.data) {
                 setTimeout(()=> {

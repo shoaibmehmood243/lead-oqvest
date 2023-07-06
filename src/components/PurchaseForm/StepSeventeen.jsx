@@ -14,8 +14,28 @@ const StepSeventeen = ({formData, setFormData, step, setStep})=> {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            setIsClicked(true)
-            const res = await axios.post(URL + '/api/form/purchase', {formData});
+            setIsClicked(true);
+            const data = {
+                full_name: formData.name?.toString(),
+                email: formData.email?.toString(),
+                phone: formData.number?.toString(),
+                transaction: formData.homeType?.toString(),
+                property_type: formData.propertyType?.toString(),
+                credit_score: formData.creditScore?.toString(),
+                first_purchase: formData.isFirstPurcase?.toString(),
+                purchase_stage: formData.currentSituation?.toString(),
+                property_usage: formData.propertyUsed?.toString(),
+                home_value: formData.purchasePrice?.toString(),
+                downpayment_percentage: formData.downPayment?.toString(),
+                rate_type: formData.rateKind?.toString(),
+                total_annual_income: formData.householdIncome?.toString(),
+                employement_status: formData.employementStatus?.toString(),
+                bankruptcy: formData.isBankkrupt?.toString(),
+                income_proof: formData.incomeProof?.toString(),
+                realEstate_agent: formData.agentAssociated?.toString(),
+                zipCode: formData.zipCode?.toString()
+            }
+            const res = await axios.post(URL + '/api/v1/submit/purchase', {...data});
             setIsClicked(false);
             if(res.data) {
                 setTimeout(()=> {
