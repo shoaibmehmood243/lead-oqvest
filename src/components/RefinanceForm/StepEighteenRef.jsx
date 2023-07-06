@@ -15,10 +15,12 @@ const StepEighteenRef = ({formData, setFormData, step, setStep})=> {
         event.preventDefault();
         try {
             setIsClicked(true);
+            const phoneNumber = formData.number;
+            const numericPhoneNumber = "+1" + phoneNumber.replace(/\D/g, "");
             const data = {
                 full_name: formData.name?.toString(),
                 email: formData.email?.toString(),
-                phone: formData.number?.toString(),
+                phone: numericPhoneNumber?.toString(),
                 transaction: formData.homeType?.toString(),
                 property_type: formData.propertyType?.toString(),
                 credit_score: formData.creditScore?.toString(),
